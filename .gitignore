@@ -1,0 +1,6 @@
+# git ignore for latex
+*.aux
+*.fls
+*.log
+*.fdb_latexmk
+*.pdf
