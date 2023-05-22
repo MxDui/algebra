@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+Dada la parábola \(y = x^2\), encontrar:
+
+\begin{enumerate}
+\item Una ecuación paramétrica vectorial para la curva \(\vec{r}(t)\).
+
+Para una parábola dada por \(y = x^2\), podemos elegir \(x = t\) como nuestro parámetro. Entonces, la ecuación paramétrica vectorial para la curva es:
+
+\[
+\vec{r}(t) = (t, t^2)
+\]
+
+\item La longitud de la curva desde \((-2, 4)\) hasta \((1, 1)\).
+
+La longitud de una curva dada por una función \(y = f(x)\) desde \(x = a\) hasta \(x = b\) se calcula utilizando la integral:
+
+\[
+L = \int_{a}^{b} \sqrt{1 + [f'(x)]^2} dx
+\]
+
+En este caso, \(f'(x) = 2x\), \(a = -2\) y \(b = 1\). Por lo tanto, la longitud de la curva es:
+
+\[
+L = \int_{-2}^{1} \sqrt{1 + (2x)^2} dx \approx 6.1257
+\]
+
+\item La curvatura \(\kappa\) y la torsión \(\tau\) para todo punto.
+
+Para una curva en el plano, la curvatura \(\kappa\) se calcula como:
+
+\[
+\kappa = \frac{|\vec{r}'(t) \times \vec{r}''(t)|}{|\vec{r}'(t)|^3}
+\]
+
+Y la torsión \(\tau\) es cero, ya que la curva está en el plano.
+
+Las primeras y segundas derivadas de \(\vec{r}(t)\) son:
+
+\[
+\vec{r}'(t) = (1, 2t)
+\]
+\[
+\vec{r}''(t) = (0, 2)
+\]
+
+Por lo tanto, la curvatura \(\kappa\) es:
+
+\[
+\kappa = \frac{|\vec{r}'(t) \times \vec{r}''(t)|}{|\vec{r}'(t)|^3} = \frac{2}{5 \sqrt{5}}
+\]
+
+Por lo tanto, para cada punto en la parábola \(y = x^2\), la curvatura \(\kappa\) es \(\frac{2}{5 \sqrt{5}}\) y la torsión \(\tau\) es 0.
+
+\end{enumerate}
+
+\end{document}
