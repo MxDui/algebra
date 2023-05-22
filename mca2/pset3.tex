@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\title{Tarea 3 - M.C.A II}
+
+\begin{document}
+
+\maketitle
+
+
+Dos partículas viajan a través del espacio. A un tiempo \( t \) la primera de ellas se encuentra en
+\((-1 + t, 4 - t, -1 + 2t)\) y la segunda en \((-7 + 2t, -6 + 2t, -1 + t)\).
+
+\begin{enumerate}
+\item ¿Las dos partículas chocan? ¿Si es así, dónde y cuándo?
+
+Para responder a esta pregunta, debemos resolver el siguiente sistema de ecuaciones:
+
+\begin{align*}
+-1 + t &= -7 + 2t \\
+4 - t &= -6 + 2t \\
+-1 + 2t &= -1 + t
+\end{align*}
+
+Las dos primeras ecuaciones del sistema son:
+
+\begin{align*}
+-1 + t &= -7 + 2t \\
+4 - t &= -6 + 2t
+\end{align*}
+
+Si intentamos resolver este sistema de ecuaciones para `t = 0`, obtenemos:
+
+\begin{align*}
+-1 &\neq -7 \\
+4 &\neq -6
+\end{align*}
+
+Por lo tanto, aunque la última ecuación del sistema sugiere que las partículas podrían estar en la misma posición en `t = 0`, las dos primeras ecuaciones contradicen esto. Por lo tanto, concluimos que no hay solución para el sistema de ecuaciones, lo que significa que las dos partículas no chocan en ningún momento.
+
+\item ¿Se cruzan las trayectorias de las partículas? ¿Si es así, dónde?
+
+En este problema, estamos tratando de determinar si las trayectorias de las dos partículas se cruzan en algún punto del espacio. Sin embargo, no necesariamente tienen que cruzarse en el mismo momento. 
+
+Por lo tanto, usamos dos variables de tiempo diferentes, \( t1 \) y \( t2 \), para representar los tiempos en los que la primera y la segunda partícula, respectivamente, podrían estar en el mismo punto del espacio. 
+
+Esto nos permite considerar la posibilidad de que las partículas puedan cruzar el mismo punto en diferentes momentos. Si encontramos una solución para este sistema de ecuaciones, eso significa que las trayectorias de las partículas se cruzan en algún punto, aunque no necesariamente al mismo tiempo. 
+
+Si no hubiéramos usado dos variables de tiempo diferentes, solo estaríamos considerando la posibilidad de que las partículas choquen, es decir, que estén en el mismo punto en el mismo momento.
+
+Para responder a esta pregunta, debemos resolver el siguiente sistema de ecuaciones:
+
+\begin{align*}
+-1 + t1 &= -7 + 2t2 \\
+4 - t1 &= -6 + 2t2 \\
+-1 + 2t1 &= -1 + t2
+\end{align*}
+
+Las soluciones para este sistema de ecuaciones son \( t1 = 2 \) y \( t2 = 4 \). Esto significa que las trayectorias de las partículas se cruzan, pero en diferentes momentos. 
+
+Para encontrar el punto de intersección, podemos sustituir \( t1 = 2 \) en la ecuación de la trayectoria de la primera partícula:
+
+\((-1 + t1, 4 - t1, -1 + 2t1) = (1, 2, 3)\)
+
+Por lo tanto, las trayectorias de las partículas se cruzan en el punto (1, 2, 3). La primera partícula llega a este punto en el tiempo \( t1 = 2 \), y la segunda partícula llega a este punto en el tiempo \( t2 = 4 \).
+
+\end{enumerate}
+
+\end{document}
