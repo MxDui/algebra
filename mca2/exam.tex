@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Intersección de una Partícula con el Plano y-z}
+\author{David Rivera Morales}
+\date{\today}
+
+\maketitle
+
+Se nos ha proporcionado la aceleración, la velocidad inicial y la posición inicial de una partícula que se mueve en el espacio: $a(t) = (2, -6, -4)$, $v(0) = (-5, 1, 3)$, $r(0) = (6, -2, 1)$. Lo que queremos es determinar los dos puntos donde la trayectoria de la partícula intersecta el plano y-z.
+En primeras, calculamos la velocidad de la partícula en función del tiempo integrando la aceleración:
+\begin{align*}
+a(t) &= (2, -6, -4) \\
+\Rightarrow v(t) &= \int a(t) dt = (2t, -6t, -4t) + C,
+\end{align*}
+
+donde $C$ es una constante de integración. Usamos la condición inicial $v(0) = (-5, 1, 3)$ para encontrar que $C = (-5, 1, 3)$. Por lo tanto, la velocidad de la partícula como función del tiempo es $v(t) = (2t-5, -6t+1, -4t+3)$.
+
+Para después encontrar la posición de la partícula como una función del tiempo integrando la velocidad:
+
+\begin{align*}
+v(t) &= (2t-5, -6t+1, -4t+3) \\
+\Rightarrow r(t) &= \int v(t) dt = (t^2 - 5t, -3t^2 + t, -2t^2 + 3t) + D,
+\end{align*}
+
+donde $D$ es una constante de integración. Usamos la condición inicial $r(0) = (6, -2, 1)$ para encontrar que $D = (6, -2, 1)$. Por lo tanto, la posición de la partícula como función del tiempo es $r(t) = (t^2 - 5t + 6, -3t^2 + t - 2, -2t^2 + 3t + 1)$.
+
+La trayectoria de la partícula intersecta el plano y-z cuando la componente $x$ de la posición es cero. Resolvemos la ecuación para encontrar estos tiempos:
+
+\begin{align*}
+t^2 - 5t + 6 &= 0 \\
+\Rightarrow t &= \frac{5 \pm \sqrt{25 - 24}}{2} = 3, 2.
+\end{align*}
+
+Finalmente, encontramos los puntos de intersección sustituyendo estos tiempos en la ecuación para la posición:
+
+\begin{align*}
+r(2) &= (0, -3*2^2 + 2 - 2, -2*2^2 + 3*2 + 1) = (0, -8, -1) \\
+r(3) &= (0, -3*3^2 + 3 - 2, -2*3^2 + 3*3 + 1) = (0, -24, -8).
+\end{align*}
+
+En conclusión , los dos puntos de intersección con el plano y-z son $(0, -8, -1)$ y $(0, -24, -8)$.
+
+\end{document}
