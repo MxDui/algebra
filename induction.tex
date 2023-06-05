@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{My First LaTeX Document}
+\author{David Rivera Morales}
+\date{\today}
+\maketitle
+
+\section{1. Prove that for $a,b,c,d \in \mathbb{N}$, if $a < c$, then $\exists t \in \mathbb{N}$ such that $a + t = c$.}
+
+\begin{proof}
+Assume $a < c$. Then $\exists t \in \mathbb{N}$ such that $a + t = c$. Also $b < d$ and $\exists s \in \mathbb{N}$ such that $b + s = d$.
+\item $a + t + (b + s) = c + d$.
+\item $(a + b) + (t + s) = c + d$.
+\item $c + d = (a + b) + (t + s)$.
+\item By definition of order 
+In the context of natural numbers, the term "order" typically refers to the relation of "less than or equal to". We say that a natural number $a$ is less than or equal to another natural number $b$ if $a$ can be obtained from $b$ by subtracting a non-negative integer. This relation is denoted by $a \leq b$. 
+Formally, we can define the order relation on natural numbers as follows:
+For any natural numbers $a$ and $b$, we say that $a$ is less than or equal to $b$, denoted by $a \leq b$, if there exists a natural number $c$ such that $a + c = b$.$=> a + b < c + d$.
+\item $a + b < c + d$.
+
+\item $a < c$ and $b < d$ $=>$ $a + b < c + d$.
+
+\end{proof}
+
+% necessary math concepts
+\begin{enumerate}
+    1. **Natural Numbers ($\mathbb{N}$)**: This is written as `$\mathbb{N}$` in LaTeX. The `amssymb` package is required for `\mathbb{}`.
+
+2. **Inequalities**: Less than and greater than symbols can be directly used in LaTeX, i.e., `$a < c$` and `$d > b$`.
+
+3. **Existential Quantifier ($\exists$)**: This is represented as `$\exists$` in LaTeX.
+
+4. **Addition**: You can represent addition with the plus symbol `+`, like `$a + b$`.
+
+5. **Associative Property of Addition**: You can use parentheses to group terms and demonstrate the property, like `$(a + b) + c = a + (b + c)$`.
+
+6. **Order Relation in Natural Numbers**: You can use `\leq` for "less than or equal to" and `\geq` for "greater than or equal to". E.g., `$a \leq b$`.
+
+7. **Implication ($\Rightarrow$)**: In LaTeX, you can represent this as `$\Rightarrow$`. For example, `$a < c \Rightarrow a + b < c + d$`.
+
+
+\end{document}
