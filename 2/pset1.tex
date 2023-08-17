@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\textbf{Problema:}
+
+Definimos las operaciones de \( A = \mathbb{Z} \times \mathbb{Z} \) como sigue:
+
+\[
+(a_1, b_1) + (a_2, b_2) = (a_1 + a_2, b_1 + b_2)
+\]
+\[
+(a_1, b_1) \cdot (a_2, b_2) = (a_1 \cdot a_2, b_1 \cdot b_2)
+\]
+
+Se puede validar que \( A \), con estas operaciones, es un anillo. ¿\( A \) es un anillo abeliano? Si no lo es, muestra un contraejemplo, si sí lo es, haz una demostración feliz.
+
+\textbf{Solución:}
+
+Para probar si \( A \) es abeliano, necesitamos verificar si la suma es conmutativa. Tomemos dos elementos arbitrarios \( (a_1, b_1) \) y \( (a_2, b_2) \) de \( A \) y comprobemos si \( (a_1, b_1) + (a_2, b_2) = (a_2, b_2) + (a_1, b_1) \).
+
+Dadas las operaciones:
+\begin{align*}
+(a_1, b_1) + (a_2, b_2) &= (a_1 + a_2, b_1 + b_2) \\
+(a_1, b_1) \cdot (a_2, b_2) &= (a_1 \cdot a_2, b_1 \cdot b_2)
+\end{align*}
+
+Calculamos:
+\begin{align*}
+(a_1, b_1) + (a_2, b_2) &= (a_1 + a_2, b_1 + b_2) \\
+(a_2, b_2) + (a_1, b_1) &= (a_1 + a_2, b_1 + b_2)
+\end{align*}
+
+Ambas sumas son iguales, lo que significa que la operación de suma es conmutativa en \( A \).
+
+Por lo tanto, el anillo \( A \) con las operaciones definidas es un anillo abeliano.
+
+¡Demostración feliz realizada! 😊
+
+\end{document}
