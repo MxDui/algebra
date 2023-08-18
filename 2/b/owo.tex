@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Demostración}
+\maketitle
+
+\section*{Ejercicio 1}
+
+Sean \(x, y, z \in \mathbb{Z}\). Muestra que si \(x < y\) entonces \(x + z < y + z\).
+
+\begin{proof}
+\begin{align*}
+\text{Dado que } & x < y, \\
+& \text{podemos concluir que } y - x \text{ es un número positivo. Esto se debe a que, si } x \text{ es menor que } y, \\
+& \text{entonces la diferencia } y - x \text{ será un valor positivo.} \\
+& \text{Denotemos esta diferencia como } w, \text{ donde } w > 0. \\
+\Rightarrow & y = x + w \\
+\Rightarrow & y + z = x + w + z \\
+\text{Dado que } & w \text{ es positivo, } w + z \text{ es simplemente } z \text{ desplazado } w \text{ unidades en la dirección positiva.} \\
+\text{Así que } & w + z \text{ sigue siendo mayor que } z. \\
+\text{Por lo tanto, } & x + z \text{ es menor que } x + w + z, \\
+\Rightarrow & x + z < x + w + z \\
+\Rightarrow & x + z < y + z \\
+\end{align*}
+Por lo tanto, hemos demostrado que si \(x < y\) entonces \(x + z < y + z\) para cualesquiera \(x, y, z\) en \(\mathbb{Z}\).
+\end{proof}
+
+\end{document}
