@@ -1,10 +1,13 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[spanish]{babel}  % Use the Spanish language option for babel
 
 \begin{document}
 
 \title{Solución a Desigualdades}
+\title{Solución a Desigualdades}
+\author{David Rivera Morales}
 \maketitle
 
 \section*{Ejercicio 2}
@@ -14,22 +17,30 @@ Encuentra el conjunto solución en \( \mathbb{Z} \) para las siguientes desigual
 \begin{enumerate}
     \item \( 2x < 5 \)
     
-    Resolviendo la desigualdad, obtenemos:
+    Primero resolvemos la desigualdad:
     \begin{align*}
         2x &< 5 \\
         x &< \frac{5}{2} \\
     \end{align*}
-    Dado que \( x \in \mathbb{Z} \), el conjunto solución es \( x \in \{ \dots, -2, -1, 0, 1,2 \} \).
+    Dado que \( x \in \mathbb{Z} \), el conjunto solución es 
+    \[
+    \{ x \in \mathbb{Z} \mid x < \frac{5}{2} \}.
+    \]
+    Debido a que \( \frac{5}{2} = 2.5 \), y \( x \) debe ser un número entero, los números enteros que satisfacen la desigualdad son aquellos menores que 2.5, es decir, \( \dots, -2, -1, 0, 1, 2 \).
     
     \item \( 3x + 7 < 8 \)
     
-    Resolviendo la desigualdad, obtenemos:
+    Resolvemos la desigualdad:
     \begin{align*}
         3x + 7 &< 8 \\
         3x &< 1 \\
         x &< \frac{1}{3} \\
     \end{align*}
-    Dado que \( x \in \mathbb{Z} \), el conjunto solución es \( x \in \{ \dots, -3, -2, -1 \} \).
+    Dado que \( x \in \mathbb{Z} \), el conjunto solución es 
+    \[
+    \{ x \in \mathbb{Z} \mid x < \frac{1}{3} \}.
+    \]
+    \( \frac{1}{3} \) es aproximadamente 0.333. Dado que \( x \) debe ser un número entero, los números enteros que satisfacen esta desigualdad son aquellos menores que 0.333, es decir, \( \dots, -3, -2, -1, 0 \).
 \end{enumerate}
 
 \end{document}
