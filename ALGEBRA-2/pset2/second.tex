@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\title{Solución de Inecuaciones en \( \mathbb{Z} \)}
+\author{David Rivera Morales}
+\date{\today}
+
+\maketitle
+
+
+\section*{Demostración por inducción de la suma de una serie geométrica}
+
+Dada la serie geométrica:
+\[
+\sum_{i=0}^{n} ar^i
+\]
+queremos demostrar que:
+\[
+\sum_{i=0}^{n} ar^i = \frac{a(r^{n+1}-1)}{r-1}
+\]
+para todo \( n \in \mathbb{N} \).
+
+\textbf{Base de inducción:} \( n = 0 \)
+
+Para \( n = 0 \):
+\[
+\sum_{i=0}^{0} ar^i = a
+\]
+y
+\[
+\frac{a(r^{0+1}-1)}{r-1} = a
+\]
+Por lo tanto, la fórmula es cierta para \( n = 0 \).
+
+\textbf{Hipótesis de inducción:} Supongamos que la fórmula es cierta para \( n = k \).
+
+\textbf{Paso de inducción:} Demostraremos que es cierta para \( n = k+1 \).
+
+\begin{align*}
+\sum_{i=0}^{k+1} ar^i &= \sum_{i=0}^{k} ar^i + ar^{k+1} \\
+&= \frac{a(r^{k+1}-1)}{r-1} + ar^{k+1} \\
+&= \frac{a(r^{k+1}-1) + a(r^{k+1})(r-1)}{r-1} \\
+&= \frac{a(r^{k+2}-1)}{r-1}
+\end{align*}
+
+Por inducción matemática, la fórmula es cierta para todo \( n \in \mathbb{N} \).
+
+\end{document}
