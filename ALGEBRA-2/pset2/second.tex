@@ -5,10 +5,9 @@
 
 \title{Solución de Inecuaciones en \( \mathbb{Z} \)}
 \author{David Rivera Morales}
-\date{\today}
+\date{26 de agosto de 2023}
 
 \maketitle
-
 
 \section*{Demostración por inducción de la suma de una serie geométrica}
 
@@ -34,9 +33,13 @@ y
 \]
 Por lo tanto, la fórmula es cierta para \( n = 0 \).
 
-\textbf{Hipótesis de inducción:} Supongamos que la fórmula es cierta para \( n = k \).
+\textbf{Hipótesis de inducción:} Supongamos que la fórmula es cierta para \( n = k \):
+\[
+\sum_{i=0}^{k} ar^i = \frac{a(r^{k+1}-1)}{r-1}
+\]
 
-\textbf{Paso de inducción:} Demostraremos que es cierta para \( n = k+1 \).
+\textbf{Paso de inducción:} Demostraremos que es cierta para \( n = k+1 \):
+
 
 \begin{align*}
 \sum_{i=0}^{k+1} ar^i &= \sum_{i=0}^{k} ar^i + ar^{k+1} \\

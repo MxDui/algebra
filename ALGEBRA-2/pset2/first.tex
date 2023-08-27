@@ -1,12 +1,11 @@
 \documentclass[12pt]{article}
-
 \usepackage{amsmath, amssymb}
 
 \begin{document}
 
 \title{Solución de Inecuaciones en \( \mathbb{Z} \)}
 \author{David Rivera Morales}
-\date{\today}
+\date{26 de agosto de 2023}
 
 \maketitle
 
@@ -15,30 +14,30 @@ Dada la inecuación:
 \[
 2 - x < 6 - 2x < 4 - x
 \]
-Encuentra todas las \( x \in \mathbb{Z} \) que la satisfacen.
+Encuentra todas las \( x \in \mathbb{Z} \) que la satisfacen, utilizando y mencionando en cada paso las propie-
+dades de orden de \( \mathbb{Z} \).
 
 \section*{Solución}
-Dividimos la inecuación en dos partes:
+Dividimos la inecuación en dos partes utilizando la propiedad transitiva del orden en \( \mathbb{Z} \): \\
 1) \(2 - x < 6 - 2x\)
 2) \(6 - 2x < 4 - x\)
 
 Resolviendo la primera:
 \begin{align*}
-2 - x &< 6 - 2x \\
-x &< 4
+2 - x &< 6 - 2x & \text{(Propiedad Aditiva de } \mathbb{Z} \text{: Sumamos } x \text{ a ambos lados)} \\
+x &< 4 & \text{(Definición de orden en } \mathbb{Z} \text{)}
 \end{align*}
 
 Resolviendo la segunda:
 \begin{align*}
-6 - 2x &< 4 - x \\
-x &> 2
+6 - 2x &< 4 - x & \text{(Propiedad Aditiva de } \mathbb{Z} \text{: Sumamos } x \text{ y restamos 4 a ambos lados)} \\
+x &> 2 & \text{(Definición de orden en } \mathbb{Z} \text{)}
 \end{align*}
 
-Juntando ambas soluciones, obtenemos:
+Juntando ambas soluciones con la propiedad transitiva del orden en \( \mathbb{Z} \):
 \[
 2 < x < 4
 \]
-Por lo que \(x = 3\) en \(\mathbb{Z}\).
+Por lo que \(x = 3\) es la única solución en \(\mathbb{Z}\).
 
 \end{document}
-    
