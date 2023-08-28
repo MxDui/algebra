@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\title{Solución de Inecuaciones en \( \mathbb{Z} \)}
+\title{Demostración por Inducción de la Suma de una Serie Geométrica}
 \author{David Rivera Morales}
 \date{26 de agosto de 2023}
 
@@ -11,7 +11,7 @@
 
 \section*{Demostración por inducción de la suma de una serie geométrica}
 
-Dada la serie geométrica:
+Sea la serie geométrica:
 \[
 \sum_{i=0}^{n} ar^i
 \]
@@ -31,20 +31,26 @@ y
 \[
 \frac{a(r^{0+1}-1)}{r-1} = a
 \]
-Por lo tanto, la fórmula es cierta para \( n = 0 \).
+Por lo tanto, la fórmula se cumple para \( n = 0 \).
 
-\textbf{Hipótesis de inducción:} Supongamos que la fórmula es cierta para \( n = k \):
+\textbf{Hipótesis de inducción:} Supongamos que la fórmula se cumple para \( n = k \):
 \[
 \sum_{i=0}^{k} ar^i = \frac{a(r^{k+1}-1)}{r-1}
 \]
 
-\textbf{Paso de inducción:} Demostraremos que es cierta para \( n = k+1 \):
+\textbf{Paso de inducción:} Demostraremos que se cumple para \( n = k+1 \):
 
+P.D.:
+\[
+\sum_{i=0}^{k+1} ar^i = \frac{a(r^{k+2}-1)}{r-1}    
+\]
 
+Desarrollo:
 \begin{align*}
 \sum_{i=0}^{k+1} ar^i &= \sum_{i=0}^{k} ar^i + ar^{k+1} \\
-&= \frac{a(r^{k+1}-1)}{r-1} + ar^{k+1} \\
-&= \frac{a(r^{k+1}-1) + a(r^{k+1})(r-1)}{r-1} \\
+&= \frac{a(r^{k+1}-1)}{r-1} + ar^{k+1} & \text{(por hipótesis de inducción)} \\
+&= \frac{a(r^{k+1} - 1) + ar^{k+1}(r-1) + ar^{k+1} - ar^{k+1}(r-1)}{r-1} & \text{(agregando y restando } ar^{k+1}(r-1) \text{)} \\
+&= \frac{a(r^{k+1}-1) + ar^{k+2} - ar^{k+1}}{r-1} & \text{(distribuyendo)} \\
 &= \frac{a(r^{k+2}-1)}{r-1}
 \end{align*}
 
