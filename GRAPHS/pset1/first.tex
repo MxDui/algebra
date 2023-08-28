@@ -16,19 +16,19 @@
 \section*{Problema 4}
 Considera \( G \) una gráfica de orden \( n = 8 \) y tamaño \( m = 15 \) en la cual cada vértice es de grado 3 o 5. ¿Cuántos vértices de grado cinco tiene \( G \)?
 \begin{enumerate}
-    \item Supongamos que la gráfica \( G \) tiene \( x \) vértices de grado 5 y \( y \) vértices de grado 3.
-    \item Dado que la gráfica tiene un total de \( n = 8 \) vértices, podemos establecer:
-    \[ x + y = 8 \]
-    (es decir, la suma de vértices de grado 5 y vértices de grado 3 es 8).
-    \item Cada vértice de grado 5 contribuye con 5 aristas y cada vértice de grado 3 contribuye con 3 aristas. Pero, cada arista se cuenta dos veces (una vez por cada vértice que incide en ella). Por lo tanto, el total de aristas \( m \) es:
-    \[ \frac{5x + 3y}{2} = 15 \]
-    (es decir, la suma ponderada de los vértices de grado 5 y 3, dividido por 2, es igual al total de aristas).
-    \item Ahora, tenemos un sistema de ecuaciones con dos incógnitas:
-    \begin{align*}
-    x + y &= 8 \quad (i) \\
-    \frac{5x + 3y}{2} &= 15 \quad (ii)
-    \end{align*}
-    Resolviendo este sistema, encontramos que \( x = 3 \). Es decir, la gráfica \( G \) tiene 3 vértices de grado 5.
+	\item Supongamos que la gráfica \( G \) tiene \( x \) vértices de grado 5 y \( y \) vértices de grado 3.
+	\item Dado que la gráfica tiene un total de \( n = 8 \) vértices, podemos establecer:
+	      \[ x + y = 8 \]
+	      (es decir, la suma de vértices de grado 5 y vértices de grado 3 es 8).
+	\item Cada vértice de grado 5 contribuye con 5 aristas y cada vértice de grado 3 contribuye con 3 aristas. Pero, cada arista se cuenta dos veces (una vez por cada vértice que incide en ella). Por lo tanto, el total de aristas \( m \) es:
+	      \[ \frac{5x + 3y}{2} = 15 \]
+	      (es decir, la suma ponderada de los vértices de grado 5 y 3, dividido por 2, es igual al total de aristas).
+	\item Ahora, tenemos un sistema de ecuaciones con dos incógnitas:
+	      \begin{align*}
+		      x + y             & = 8 \quad (i)   \\
+		      \frac{5x + 3y}{2} & = 15 \quad (ii)
+	      \end{align*}
+	      Resolviendo este sistema, encontramos que \( x = 3 \). Es decir, la gráfica \( G \) tiene 3 vértices de grado 5.
 \end{enumerate}
 
 
@@ -36,75 +36,75 @@ Considera \( G \) una gráfica de orden \( n = 8 \) y tamaño \( m = 15 \) en la
 Dada la siguiente gráfica \( G' \):
 
 \begin{enumerate}
-    \item Encuentra una subgráfica generadora tal que todo vértice tenga grado 4.
-          \begin{figure}[h]
-              \centering
-              \includegraphics[width=0.7\textwidth]{assets/g-prime.png}
-              \caption{Gráfica \( G' \)}
-              \label{fig:g-prime}
-          \end{figure}
+	\item Encuentra una subgráfica generadora tal que todo vértice tenga grado 4.
+	      \begin{figure}[h]
+		      \centering
+		      \includegraphics[width=0.7\textwidth]{assets/g-prime.png}
+		      \caption{Gráfica \( G' \)}
+		      \label{fig:g-prime}
+	      \end{figure}
 
-    \item Dibuja a la subgráfica inducida por \( A = \{u1, u2, u10, u4, u7, u8\} \).
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=1\textwidth]{assets/induced-subgraph.png}
-              \caption{Subgráfica inducida por \( A \)}
-              \label{fig:induced-subgraph}
-          \end{figure}
+	\item Dibuja a la subgráfica inducida por \( A = \{u1, u2, u10, u4, u7, u8\} \).
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[width=1\textwidth]{assets/induced-subgraph.png}
+		      \caption{Subgráfica inducida por \( A \)}
+		      \label{fig:induced-subgraph}
+	      \end{figure}
 
-    \item Di si las gráficas \( G_1 \) y \( G_2 \) son subgráficas inducidas de \( G' \). Argumenta tus respuestas.
-    % Here, we start the representation for G'
-    \vspace{1em} % Adding vertical space for separation
-    
-    \textbf{Respuesta:} La gráfica \( G_1 \) es una subgráfica inducida de \( G' \), ya que las conexiones entre los vértices de \( G_1 \) son las mismas que las conexiones entre los vértices de \( G' \). Por otro lado, la gráfica \( G_2 \) no es una subgráfica inducida de \( G' \), ya que los vértices \( u_1 \) y \( u_2 \) están conectados en \( G_2 \), pero no en \( G' \).
-\vspace{1em} % Adding vertical space for separation
+	\item Di si las gráficas \( G_1 \) y \( G_2 \) son subgráficas inducidas de \( G' \). Argumenta tus respuestas.
+	      % Here, we start the representation for G'
+	      \vspace{1em} % Adding vertical space for separation
 
-% Representation for G'
-\textbf{Gráfica \( G' \):}
-\begin{center}
-\begin{tabular}{|c|c|}
-    \hline
-    Vértices & Aristas \\
-    \hline
-    \( v_1 \) & \( (v_1, v_2), (v_1, v_3) \) \\
-    \( v_2 \) & \( (v_2, v_3) \) \\
-    ... & ... \\
-    \hline
-\end{tabular}
-\end{center}
+	      \textbf{Respuesta:} La gráfica \( G_1 \) es una subgráfica inducida de \( G' \), ya que las conexiones entre los vértices de \( G_1 \) son las mismas que las conexiones entre los vértices de \( G' \). Por otro lado, la gráfica \( G_2 \) no es una subgráfica inducida de \( G' \), ya que los vértices \( u_1 \) y \( u_2 \) están conectados en \( G_2 \), pero no en \( G' \).
+	      \vspace{1em} % Adding vertical space for separation
 
-\vspace{1em} % Adding vertical space for separation
+	      % Representation for G'
+	      \textbf{Gráfica \( G' \):}
+	      \begin{center}
+		      \begin{tabular}{|c|c|}
+			      \hline
+			      Vértices  & Aristas                      \\
+			      \hline
+			      \( v_1 \) & \( (v_1, v_2), (v_1, v_3) \) \\
+			      \( v_2 \) & \( (v_2, v_3) \)             \\
+			      ...       & ...                          \\
+			      \hline
+		      \end{tabular}
+	      \end{center}
 
-% Representation for G1
-\textbf{Gráfica \( G_1 \):}
-\begin{center}
-\begin{tabular}{|c|c|}
-    \hline
-    Vértices & Aristas \\
-    \hline
-    \( u_1 \) & \( (u_1, u_2), (u_1, u_3) \) \\
-    \( u_2 \) & \( (u_2, u_3) \) \\
-    ... & ... \\
-    \hline
-\end{tabular}
-\end{center}
+	      \vspace{1em} % Adding vertical space for separation
 
-\vspace{1em} % Adding vertical space for separation
+	      % Representation for G1
+	      \textbf{Gráfica \( G_1 \):}
+	      \begin{center}
+		      \begin{tabular}{|c|c|}
+			      \hline
+			      Vértices  & Aristas                      \\
+			      \hline
+			      \( u_1 \) & \( (u_1, u_2), (u_1, u_3) \) \\
+			      \( u_2 \) & \( (u_2, u_3) \)             \\
+			      ...       & ...                          \\
+			      \hline
+		      \end{tabular}
+	      \end{center}
 
-% Representation for G2
-\textbf{Gráfica \( G_2 \):}
-\begin{center}
-\begin{tabular}{|c|c|}
-    \hline
-    Vértices & Aristas \\
-    \hline
-    \( w_1 \) & \( (w_1, w_2), (w_1, w_3) \) \\
-    \( w_2 \) & \( (w_2, w_3) \) \\
-    ... & ... \\
-    \hline
-\end{tabular}
-\end{center}
-         
+	      \vspace{1em} % Adding vertical space for separation
+
+	      % Representation for G2
+	      \textbf{Gráfica \( G_2 \):}
+	      \begin{center}
+		      \begin{tabular}{|c|c|}
+			      \hline
+			      Vértices  & Aristas                      \\
+			      \hline
+			      \( w_1 \) & \( (w_1, w_2), (w_1, w_3) \) \\
+			      \( w_2 \) & \( (w_2, w_3) \)             \\
+			      ...       & ...                          \\
+			      \hline
+		      \end{tabular}
+	      \end{center}
+
 \end{enumerate}
 
 
