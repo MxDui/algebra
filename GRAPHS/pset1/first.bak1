@@ -6,7 +6,8 @@
 \usepackage{float} % For the H specifier
 
 \title{Ejercicios de grafos}
-\date{29 de Agosto de 2023}
+\author{David Rivera Morales}
+\date{\today}
 
 \begin{document}
 
@@ -31,63 +32,17 @@ Considera \( G \) una gráfica de orden \( n = 8 \) y tamaño \( m = 15 \) en la
 \end{enumerate}
 
 
-
 \section*{Problema 5}
 Dada la siguiente gráfica \( G' \):
 
 \begin{enumerate}
 	\item Encuentra una subgráfica generadora tal que todo vértice tenga grado 4.
-	\begin{figure}[h]
-		\centering
-		\begin{tikzpicture}
-			% Vertices
-			\node[draw, circle] (u1) at (0,3) {\( u_1 \)};
-			\node[draw, circle] (u2) at (2,3) {\( u_2 \)};
-			\node[draw, circle] (u3) at (0,2) {\( u_3 \)};
-			\node[draw, circle] (u4) at (2,2) {\( u_4 \)};
-			\node[draw, circle] (u5) at (1,1) {\( u_5 \)};
-			\node[draw, circle] (u6) at (1,0) {\( u_6 \)};
-			\node[draw, circle] (u7) at (0,-1) {\( u_7 \)};
-			\node[draw, circle] (u8) at (2,-1) {\( u_8 \)};
-			\node[draw, circle] (u9) at (0,-2) {\( u_9 \)};
-			\node[draw, circle] (u10) at (2,-2) {\( u_{10} \)};
-
-			% Aristas
-			\draw (u1) -- (u2);
-			\draw (u1) -- (u3);
-			\draw (u1) -- (u4);
-			\draw (u1) -- (u5);
-			
-			\draw (u2) -- (u3);
-			\draw (u2) -- (u4);
-			\draw (u2) -- (u5);
-			\draw (u2) -- (u8); % arista añadida
-
-			\draw (u3) -- (u5);
-			\draw (u3) -- (u6);
-			\draw (u3) -- (u9); % arista añadida
-			
-			\draw (u4) -- (u5);
-			\draw (u4) -- (u6);
-			\draw (u4) -- (u10); % arista añadida
-
-			\draw (u6) -- (u7);
-			\draw (u6) -- (u8);
-			\draw (u6) -- (u9);
-
-			\draw (u7) -- (u8);
-			\draw (u7) -- (u9);
-			\draw (u7) -- (u10);
-
-			\draw (u8) -- (u9);
-			\draw (u8) -- (u10);
-
-			\draw (u9) -- (u10);
-
-		\end{tikzpicture}
-		\caption{Subgráfica generadora de \( G' \)}
-		\label{fig:subgraph-gprime}
-	\end{figure}
+	      \begin{figure}[h]
+		      \centering
+		      \includegraphics[width=0.7\textwidth]{assets/g-prime.png}
+		      \caption{Gráfica \( G' \)}
+		      \label{fig:g-prime}
+	      \end{figure}
 
 	\item Dibuja a la subgráfica inducida por \( A = \{u1, u2, u10, u4, u7, u8\} \).
 	      \begin{figure}[H]
@@ -109,19 +64,19 @@ Dada la siguiente gráfica \( G' \):
 	      \begin{center}
 		      \begin{tabular}{|c|c|}
 			      \hline
-			      Vértices    & Aristas                                              \\
+			      Vértices  & Aristas                      \\
 			      \hline
-			      \( u_1 \)   & \( (u_1, u_2), (u_1, u_3) , (u_1, u_4),(u_1, u_5) \) \\
-			      \( u_2 \)   & \( (u_2, u_3), (u_2, u_4), (u_2, u_5) \)             \\
-			      \( u_3 \)   & \( (u_3, u_5), (u_3,u_6) \)                          \\
-			      \( u_4 \)   & \( (u_4, u_5), (u_4,u_6),(u_4,u_{10}) \)             \\
-			      \( u_5 \)   & \(  \)                                               \\
-			      \( u_6 \)   & \( (u_6, u_7) , (u_6,u_8), (u_6,u_9)\)               \\
-			      \(u_7 \)    & \( (u_7, u_8) , (u_7,u_9),(u_7,u_{10}) \)            \\
-			      \(u_8 \)    & \( (u_8, u_9) , (u_8,u_{10}) \)                      \\
-			      \(u_9 \)    & \( (u_9, u_{10}) \)                                  \\
-			      \(u_{10} \) & \(  \)                                               \\
-			      \hline
+			      \( u_1 \) & \( (u_1, u_2), (u_1, u_3) , (u_1, u_4),(u_1, u_5) \) \\
+			      \( u_2 \) & \( (u_2, u_3), (u_2, u_4), (u_2, u_5) \)             \\
+				  \( u_3 \) & \( (u_3, u_5), (u_3,u_6) \)                         \\
+				  \( u_4 \) & \( (u_4, u_5), (u_4,u_6),(u_4,u_{10}) \)   \\
+				  \( u_5 \) & \(  \)                         \\
+				\( u_6 \) & \( (u_6, u_7) , (u_6,u_8), (u_6,u_9)\)             \\
+				\(u_7 \) & \( (u_7, u_8) , (u_7,u_9),(u_7,u_{10}) \)             \\
+				\(u_8 \) & \( (u_8, u_9) , (u_8,u_{10}) \)             \\
+				\(u_9 \) & \( (u_9, u_{10}) \)             \\
+				\(u_{10} \) & \(  \)             \\
+				  \hline
 		      \end{tabular}
 	      \end{center}
 
@@ -132,15 +87,15 @@ Dada la siguiente gráfica \( G' \):
 	      \begin{center}
 		      \begin{tabular}{|c|c|}
 			      \hline
-			      Vértices  & Aristas                                    \\
+			      Vértices  & Aristas                      \\
 			      \hline
 			      \( u_1 \) & \( (u_1, u_2), (u_1, u_3) , (u_1, u_4), \) \\
-			      \( u_2 \) & \( (u_2, u_3), (u_2, u_4) \)               \\
-			      \( u_3 \) & \( (u_3, u_6) \)                           \\
-			      \( u_4 \) & \( (u_4, u_6) \)                           \\
-			      \( u_6 \) & \( (u_6, u_7) , (u_6,u_9) \)               \\
-			      \( u_7 \) & \( (u_7, u_9) \)                           \\
-			      \( u_9 \) & \( \)                                      \\
+			      \( u_2 \) & \( (u_2, u_3), (u_2, u_4) \)             \\
+			      \( u_3 \) & \( (u_3, u_6) \)                         \\
+				  \( u_4 \) & \( (u_4, u_6) \)                         \\
+				  \( u_6 \) & \( (u_6, u_7) , (u_6,u_9) \)              \\
+				  \( u_7 \) & \( (u_7, u_9) \)                         \\
+				  \( u_9 \) & \( \)                   \\
 			      \hline
 		      \end{tabular}
 	      \end{center}
@@ -152,17 +107,17 @@ Dada la siguiente gráfica \( G' \):
 	      \begin{center}
 		      \begin{tabular}{|c|c|}
 			      \hline
-			      Vértices     & Aristas                                   \\
+			      Vértices  & Aristas                      \\
 			      \hline
-			      \( u_2 \)    & \( (u_2, u_3), (u_2, u_4), (u_2,u_5) \)   \\
-			      \( u_3 \)    & \( (u_3, u_5), (u_3,u_6) \)               \\
-			      \( u_4 \)    & \( (u_4, u_5), (u_4,u_{10}) \)            \\
-			      \( u_5 \)    & \(  \)                                    \\
-			      \( u_6 \)    & \( (u_6, u_8) , (u_6,u_7), (u_6,u_{10})\) \\
-			      \( u_7 \)    & \( (u_7, u_8) , (u_7,u_{10}) \)           \\
-			      \( u_8 \)    & \( (u_8, u_{10}) \)                       \\
-			      \( u_{10} \) & \(  \)                                    \\
-			      \hline
+			      \( u_2 \) & \( (u_2, u_3), (u_2, u_4), (u_2,u_5) \) \\
+				  \( u_3 \) & \( (u_3, u_5), (u_3,u_6) \)             \\
+				  \( u_4 \) & \( (u_4, u_5), (u_4,u_{10}) \)             \\
+			      \( u_5 \) & \(  \)             \\
+				  \( u_6 \) & \( (u_6, u_8) , (u_6,u_7), (u_6,u_{10})\)             \\
+				  \( u_7 \) & \( (u_7, u_8) , (u_7,u_{10}) \)            \\
+				  \( u_8 \) & \( (u_8, u_{10}) \)             \\
+				  \( u_{10} \) & \(  \)             \\
+				  \hline
 		      \end{tabular}
 	      \end{center}
 
@@ -174,28 +129,28 @@ Da un ejemplo de dos gráficas \( G \) y \( H \) y una función biyectiva \( f: 
 
 \subsection*{Gráfica \( G \)}
 \begin{center}
-	\begin{tikzpicture}
-		\node[draw, circle] (a) at (0,0) {a};
-		\node[draw, circle] (b) at (2,0) {b};
-		\node[draw, circle] (c) at (2,2) {c};
-		\node[draw, circle] (d) at (0,2) {d};
+\begin{tikzpicture}
+  \node[draw, circle] (a) at (0,0) {a};
+  \node[draw, circle] (b) at (2,0) {b};
+  \node[draw, circle] (c) at (2,2) {c};
+  \node[draw, circle] (d) at (0,2) {d};
 
-		\draw (a) -- (b) -- (c) -- (d) -- (a);
-	\end{tikzpicture}
+  \draw (a) -- (b) -- (c) -- (d) -- (a);
+\end{tikzpicture}
 \end{center}
 
 \subsection*{Gráfica \( H \)}
 \begin{center}
-	\begin{tikzpicture}
-		\node[draw, circle] (w) at (4,1) {w};
-		\node[draw, circle] (x) at (6,0) {x};
-		\node[draw, circle] (y) at (6,2) {y};
-		\node[draw, circle] (z) at (8,1) {z};
+\begin{tikzpicture}
+  \node[draw, circle] (w) at (4,1) {w};
+  \node[draw, circle] (x) at (6,0) {x};
+  \node[draw, circle] (y) at (6,2) {y};
+  \node[draw, circle] (z) at (8,1) {z};
 
-		\draw (w) -- (x);
-		\draw (w) -- (y);
-		\draw (w) -- (z);
-	\end{tikzpicture}
+  \draw (w) -- (x);
+  \draw (w) -- (y);
+  \draw (w) -- (z);
+\end{tikzpicture}
 \end{center}
 
 \textbf{Justificación:}
