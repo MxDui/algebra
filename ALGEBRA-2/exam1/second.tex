@@ -1,5 +1,22 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{parskip}
+\usepackage{graphicx}
+\geometry{a4paper, margin=1in}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}
+{\thesection}{1em}{}
+
+\pretitle{\begin{center}\Huge\bfseries}
+\posttitle{\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\large\ttfamily}
+\postauthor{\end{center}}
+\predate{\begin{center}\large}
+\postdate{\end{center}}
 
 \begin{document}
 \title{Ejercicio 2}
@@ -12,20 +29,13 @@ Si \(a, b, n \in \mathbb{N}\) y \(a \leq b\), entonces se cumple que:
 \[a^n \leq b^n\]
 para todo \(n \in \mathbb{N}\).
 
-\section*{Demostración}
+\section*{Demostración por Inducción}
 
-Para demostrar por inducción, seguimos un proceso de dos pasos:
-
-\begin{enumerate}
-    \item \textbf{Base de inducción:} Mostrar que la proposición es verdadera para el menor valor de \(n\) (en este caso, \(n = 1\)).
-    \item \textbf{Paso inductivo:} Asumir que la proposición es verdadera para \(n = k\) y demostrar que también es verdadera para \(n = k + 1\).
-\end{enumerate}
-
-\noindent \textbf{Base de inducción:} \(n = 1\)
+\textbf{Base de inducción:} \(n = 1\)
 
 Si \(a \leq b\), entonces \(a^1 \leq b^1\), lo que implica \(a \leq b\). Esto es trivialmente cierto porque se nos da que \(a \leq b\).
 
-\noindent \textbf{Paso inductivo:} Asumamos que la proposición es verdadera para \(n = k\). Es decir, asumamos que:
+\textbf{Paso inductivo:} Asumamos que la proposición es verdadera para \(n = k\). Es decir, asumamos que:
 \[a^k \leq b^k\] (Hipótesis inductiva)
 
 Necesitamos demostrar que:
@@ -45,5 +55,17 @@ Por lo tanto, \(a^{k+1} \leq b^{k+1}\).
 Hemos demostrado que si la proposición es verdadera para \(n = k\), entonces también es verdadera para \(n = k + 1\).
 
 Por el principio de inducción matemática, la proposición \(a^n \leq b^n\) es verdadera para todo \(n \in \mathbb{N}\).
+
+\section*{Problema 2.b}
+
+\textbf{Objetivo:} Encontrar tres enteros \(a, b, c\) tales que \(a | bc\) pero \(a\) no divida a \(b\) y \(a\) no divida a \(c\).
+
+\textbf{Solución:}
+
+Considerando los factores primos, si \(a\) tiene dos factores primos distintos, \(b\) podría tener uno de esos factores y \(c\) el otro. Así, \(b \times c\) tendría ambos factores primos, siendo divisible por \(a\). Pero individualmente, ni \(b\) ni \(c\) serían divisibles por \(a\).
+
+Tomando \(a = 6\) (donde \(6 = 2 \times 3\) y ambos son primos), y eligiendo \(b = 2\) y \(c = 3\), obtenemos que \(a | bc\), pero \(a\) no divide a \(b\) ni a \(c\).
+
+Por lo tanto, \(a = 6\), \(b = 2\), y \(c = 3\) son los enteros que cumplen con las condiciones dadas.
 
 \end{document}
