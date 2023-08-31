@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\title{Ejercicio 2}
+\author{David Rivera Morales}
+\date{31 de Agosto de 2023}
+\maketitle
+
+\section*{Proposición}
+Si \(a, b, n \in \mathbb{N}\) y \(a \leq b\), entonces se cumple que:
+\[a^n \leq b^n\]
+para todo \(n \in \mathbb{N}\).
+
+\section*{Demostración}
+
+Para demostrar por inducción, seguimos un proceso de dos pasos:
+
+\begin{enumerate}
+    \item \textbf{Base de inducción:} Mostrar que la proposición es verdadera para el menor valor de \(n\) (en este caso, \(n = 1\)).
+    \item \textbf{Paso inductivo:} Asumir que la proposición es verdadera para \(n = k\) y demostrar que también es verdadera para \(n = k + 1\).
+\end{enumerate}
+
+\noindent \textbf{Base de inducción:} \(n = 1\)
+
+Si \(a \leq b\), entonces \(a^1 \leq b^1\), lo que implica \(a \leq b\). Esto es trivialmente cierto porque se nos da que \(a \leq b\).
+
+\noindent \textbf{Paso inductivo:} Asumamos que la proposición es verdadera para \(n = k\). Es decir, asumamos que:
+\[a^k \leq b^k\] (Hipótesis inductiva)
+
+Necesitamos demostrar que:
+\[a^{k+1} \leq b^{k+1}\]
+
+Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis inductiva por \(a\):
+\[a \cdot a^k \leq a \cdot b^k\]
+
+Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis inductiva por \(b\):
+\[a^k \cdot b \leq b^{k+1}\]
+
+Combinando las dos inecuaciones:
+\[a^{k+1} \leq a \cdot b^k \leq b^{k+1}\]
+
+Por lo tanto, \(a^{k+1} \leq b^{k+1}\).
+
+Hemos demostrado que si la proposición es verdadera para \(n = k\), entonces también es verdadera para \(n = k + 1\).
+
+Por el principio de inducción matemática, la proposición \(a^n \leq b^n\) es verdadera para todo \(n \in \mathbb{N}\).
+
+\end{document}
