@@ -9,7 +9,7 @@
 
 \section*{1.a Demostración de que $15 | 2^{4n} - 1$ para todo $n \in \mathbb{N}$}
 
-Para probar que $15$ divide a $2^{4n} - 1$, necesitamos demostrar que:
+Para saber que $15$ divide a $2^{4n} - 1$, necesitamos demostrar que:
 \begin{enumerate}
     \item $3 \mid 2^{4n} - 1$
     \item $5 \mid 2^{4n} - 1$
@@ -17,7 +17,7 @@ Para probar que $15$ divide a $2^{4n} - 1$, necesitamos demostrar que:
 
 Si ambas condiciones son verdaderas, entonces $15$ (que es $3 \times 5$) divide a $2^{4n} - 1$.
 
-\section*{1.Prueba de que $3 \mid 2^{4n} - 1$}
+\subsection*{1.Prueba de que $3 \mid 2^{4n} - 1$}
 
 Consideremos la secuencia $2^n \mod 3$:
 \begin{align*}
@@ -28,11 +28,11 @@ Consideremos la secuencia $2^n \mod 3$:
 2^4 &\equiv 16 \equiv 1 \mod 3 \\
 \end{align*}
 
-A partir de aquí, podemos observar un patrón: $2^{4n} \equiv 1 \mod 3$ para todo $n \in \mathbb{N}$.
+Podemos observar un patrón: $2^{4n} \equiv 1 \mod 3$ para todo $n \in \mathbb{N}$.
 
 Por lo tanto, $2^{4n} - 1 \equiv 0 \mod 3$, lo que implica que $3 \mid 2^{4n} - 1$.
 
-\section*{2.Prueba de que $5 \mid 2^{4n} - 1$}
+\subsection*{2.Prueba de que $5 \mid 2^{4n} - 1$}
 
 Consideremos la secuencia $2^n \mod 5$:
 \begin{align*}
@@ -43,11 +43,11 @@ Consideremos la secuencia $2^n \mod 5$:
 2^4 &\equiv 16 \equiv 1 \mod 5 \\
 \end{align*}
 
-Nuevamente, observamos un patrón: $2^{4n} \equiv 1 \mod 5$ para todo $n \in \mathbb{N}$.
+De nuevo exite un patrón: $2^{4n} \equiv 1 \mod 5$ para todo $n \in \mathbb{N}$.
 
 Por lo tanto, $2^{4n} - 1 \equiv 0 \mod 5$, lo que implica que $5 \mid 2^{4n} - 1$.
 
-Dado que ambas condiciones (1 y 2) son verdaderas, concluimos que $15 \mid 2^{4n} - 1$ para todo $n \in \mathbb{N}$.
+Ya que ambas condiciones (1 y 2) son verdaderas, podemos decir que $15 \mid 2^{4n} - 1$ para todo $n \in \mathbb{N}$.
 
 \section*{1.b Indica si la siguiente proposición es verdadera o falsa: "14 divide a 997157"}    
 
@@ -66,6 +66,6 @@ Aplicando la regla del $7$ a $997157$:
 
 El número $980$ es divisible por $7$. Sin embargo, dado que $997157$ no es divisible por $2$, podemos concluir que $14$ no divide a $997157$.
 
-Por lo tanto, la proposición "14 divide a 997157" es falsa.
+Por lo tanto, la proposición "14 | 997157" es falsa.
 
 \end{document}

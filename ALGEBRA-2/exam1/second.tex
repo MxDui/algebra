@@ -7,44 +7,32 @@
 \usepackage{graphicx}
 \geometry{a4paper, margin=1in}
 
-\titleformat{\section}
-{\normalfont\Large\bfseries}
-{\thesection}{1em}{}
-
-\pretitle{\begin{center}\Huge\bfseries}
-\posttitle{\end{center}\vskip 0.5em}
-\preauthor{\begin{center}\large\ttfamily}
-\postauthor{\end{center}}
-\predate{\begin{center}\large}
-\postdate{\end{center}}
-
 \begin{document}
 \title{Ejercicio 2}
 \author{David Rivera Morales}
 \date{31 de Agosto de 2023}
 \maketitle
 
-\section*{Proposición}
-Si \(a, b, n \in \mathbb{N}\) y \(a \leq b\), entonces se cumple que:
-\[a^n \leq b^n\]
-para todo \(n \in \mathbb{N}\).
+\section*{2.a Si \(a, b, n \in \mathbb{N}\) y \(a \leq b\), entonces se cumple que:
+\[a^n \leq b^n\] para todo \(n \in \mathbb{N}\).}
+
 
 \section*{Demostración por Inducción}
 
-\textbf{Base de inducción:} \(n = 1\)
+\textbf{Caso base:} \(n = 1\)
 
 Si \(a \leq b\), entonces \(a^1 \leq b^1\), lo que implica \(a \leq b\). Esto es trivialmente cierto porque se nos da que \(a \leq b\).
 
-\textbf{Paso inductivo:} Asumamos que la proposición es verdadera para \(n = k\). Es decir, asumamos que:
-\[a^k \leq b^k\] (Hipótesis inductiva)
+\textbf{Hipótesis de Inducción:} Asumamos que la proposición es verdadera para \(n = k\). Es decir, asumamos que:
+\[a^k \leq b^k\]
 
-Necesitamos demostrar que:
+\textbf{Paso inductivo:} Bajo la hipótesis de inducción, necesitamos demostrar que:
 \[a^{k+1} \leq b^{k+1}\]
 
-Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis inductiva por \(a\):
+Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis de inducción por \(a\):
 \[a \cdot a^k \leq a \cdot b^k\]
 
-Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis inductiva por \(b\):
+Dado que \(a \leq b\), multiplicamos ambos lados de la hipótesis de inducción por \(b\):
 \[a^k \cdot b \leq b^{k+1}\]
 
 Combinando las dos inecuaciones:
@@ -56,9 +44,7 @@ Hemos demostrado que si la proposición es verdadera para \(n = k\), entonces ta
 
 Por el principio de inducción matemática, la proposición \(a^n \leq b^n\) es verdadera para todo \(n \in \mathbb{N}\).
 
-\section*{Problema 2.b}
-
-\textbf{Objetivo:} Encontrar tres enteros \(a, b, c\) tales que \(a | bc\) pero \(a\) no divida a \(b\) y \(a\) no divida a \(c\).
+\section*{2.b Encontrar tres enteros \(a, b, c\) tales que \(a | bc\) pero \(a\) no divida a \(b\) y \(a\) no divida a \(c\).}
 
 \textbf{Solución:}
 
