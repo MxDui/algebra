@@ -36,58 +36,59 @@ Considera \( G \) una gráfica de orden \( n = 8 \) y tamaño \( m = 15 \) en la
 Dada la siguiente gráfica \( G' \):
 
 \begin{enumerate}
-	\item Encuentra una subgráfica generadora tal que todo vértice tenga grado 4.
+\begin{enumerate}
+\item Encuentra una subgráfica generadora tal que todo vértice tenga grado 4.
 	\begin{figure}[h]
-		\centering
-		\begin{tikzpicture}
-			% Vertices
-			\node[draw, circle] (u1) at (0,3) {\( u_1 \)};
-			\node[draw, circle] (u2) at (2,3) {\( u_2 \)};
-			\node[draw, circle] (u3) at (0,2) {\( u_3 \)};
-			\node[draw, circle] (u4) at (2,2) {\( u_4 \)};
-			\node[draw, circle] (u5) at (1,1) {\( u_5 \)};
-			\node[draw, circle] (u6) at (1,0) {\( u_6 \)};
-			\node[draw, circle] (u7) at (0,-1) {\( u_7 \)};
-			\node[draw, circle] (u8) at (2,-1) {\( u_8 \)};
-			\node[draw, circle] (u9) at (0,-2) {\( u_9 \)};
-			\node[draw, circle] (u10) at (2,-2) {\( u_{10} \)};
+	\centering
+	\begin{tikzpicture}
+		% Vertices
+		\node[draw, circle] (u1) at (0,5) {\( u_1 \)};
+		\node[draw, circle] (u2) at (4,5) {\( u_2 \)};
+		\node[draw, circle] (u3) at (0,3.5) {\( u_3 \)};
+		\node[draw, circle] (u4) at (4,3.5) {\( u_4 \)};
+		\node[draw, circle] (u5) at (2,3) {\( u_5 \)};
+		\node[draw, circle] (u6) at (2,2) {\( u_6 \)};
+		\node[draw, circle] (u7) at (-2,1) {\( u_7 \)};
+		\node[draw, circle] (u8) at (6,1) {\( u_8 \)};
+		\node[draw, circle] (u9) at (0,-0.5) {\( u_9 \)};
+		\node[draw, circle] (u10) at (4,-0.5) {\( u_{10} \)};
 
-			% Aristas
-			\draw (u1) -- (u2);
-			\draw (u1) -- (u3);
-			\draw (u1) -- (u4);
-			\draw (u1) -- (u5);
-			
-			\draw (u2) -- (u3);
-			\draw (u2) -- (u4);
-			\draw (u2) -- (u5);
-			\draw (u2) -- (u8); % arista añadida
+		% Aristas
+		\draw (u1) -- (u2);
+		\draw (u1) -- (u3);
+		\draw (u1) -- (u4);
+		\draw (u1) -- (u5);
+		
+		\draw (u2) -- (u3);
+		\draw (u2) -- (u4);
+		\draw (u2) -- (u5);
 
-			\draw (u3) -- (u5);
-			\draw (u3) -- (u6);
-			\draw (u3) -- (u9); % arista añadida
-			
-			\draw (u4) -- (u5);
-			\draw (u4) -- (u6);
-			\draw (u4) -- (u10); % arista añadida
+		\draw (u3) -- (u5);
+		\draw (u3) -- (u6);
+		
+		\draw (u4) -- (u5);
+		\draw (u4) -- (u6);
+		\draw (u4) -- (u10);
 
-			\draw (u6) -- (u7);
-			\draw (u6) -- (u8);
-			\draw (u6) -- (u9);
+		\draw (u6) -- (u7);
+		\draw (u6) -- (u8);
+		\draw (u6) -- (u9);
 
-			\draw (u7) -- (u8);
-			\draw (u7) -- (u9);
-			\draw (u7) -- (u10);
+		\draw (u7) -- (u8);
+		\draw (u7) -- (u9);
+		\draw (u7) -- (u10);
 
-			\draw (u8) -- (u9);
-			\draw (u8) -- (u10);
+		\draw (u8) -- (u9);
+		\draw (u8) -- (u10);
 
-			\draw (u9) -- (u10);
+		\draw (u9) -- (u10);
 
-		\end{tikzpicture}
-		\caption{Subgráfica generadora de \( G' \)}
-		\label{fig:subgraph-gprime}
-	\end{figure}
+	\end{tikzpicture}
+	\caption{Subgráfica generadora de \( G' \)}
+	\label{fig:subgraph-gprime}
+\end{figure}
+
+
 
 	\item Dibuja a la subgráfica inducida por \( A = \{u1, u2, u10, u4, u7, u8\} \).
 	      \begin{figure}[H]
@@ -101,7 +102,7 @@ Dada la siguiente gráfica \( G' \):
 	      % Here, we start the representation for G'
 	      \vspace{1em} % Adding vertical space for separation
 
-	      \textbf{Respuesta:} La gráfica \( G_1 \) es una subgráfica inducida de \( G' \), ya que las conexiones entre los vértices de \( G_1 \) son las mismas que las conexiones entre los vértices de \( G' \). Por otro lado, la gráfica \( G_2 \) no es una subgráfica inducida de \( G' \), ya que los vértices \( u_1 \) y \( u_2 \) están conectados en \( G_2 \), pero no en \( G' \).
+	      \textbf{Respuesta:} La gráfica \( G_1 \) es una subgráfica inducida de \( G' \), ya que las conexiones entre los vértices de \( G_1 \) son las mismas que las conexiones entre los vértices de \( G' \). Por otro lado, la gráfica \( G_2 \) no es una subgráfica inducida de \( G' \), ya que los vértices \( u_6 \) y \( u_{10} \) están conectados en \( G_2 \), pero no en \( G' \).
 	      \vspace{1em} % Adding vertical space for separation
 
 	      % Representation for G'
