@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\begin{document}
+
+\title{Demostración de que ser isomorfo es una relación de equivalencia}
+\maketitle
+
+Sea $G$ una gráfica. Vamos a demostrar que la relación "ser isomorfo" es una relación de equivalencia sobre gráficas. Una relación de equivalencia debe cumplir con tres propiedades: reflexividad, simetría y transitividad.
+
+\begin{enumerate}
+    \item \textbf{Reflexividad:} Una gráfica $G$ es isomorfa a sí misma. Esto es porque podemos formar un mapeo $f: V(G) \to V(G)$ (donde $V(G)$ es el conjunto de vértices de $G$) que es la función identidad, es decir, $f(v) = v$ para todo $v$ en $V(G)$. Este mapeo preserva la estructura de la gráfica.
+    
+    \item \textbf{Simetría:} Si una gráfica $G$ es isomorfa a una gráfica $H$ a través de un isomorfismo $f$, entonces $H$ es isomorfa a $G$ a través del isomorfismo inverso $f^{-1}$. Esto se debe a que si $f$ preserva la estructura de $G$ en $H$, su inversa preservará la estructura de $H$ en $G$.
+    
+    \item \textbf{Transitividad:} Si una gráfica $G$ es isomorfa a una gráfica $H$ a través de un isomorfismo $f$, y $H$ es isomorfa a una gráfica $I$ a través de un isomorfismo $g$, entonces $G$ es isomorfa a $I$ a través del isomorfismo compuesto $g \circ f$. Esto es porque si $f$ y $g$ preservan la estructura de las gráficas, su composición también lo hará.
+\end{enumerate}
+
+\end{document}
