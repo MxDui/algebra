@@ -1,7 +1,5 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, amsthm}
-\usepackage{tikz}
-\usetikzlibrary{graphs,graphs.standard}
 
 \begin{document}
 
@@ -84,28 +82,6 @@ Justificación:
 
 \section*{Gráfica \( G_2 \)}
 
-\begin{center}
-\begin{tikzpicture}
-    \graph [nodes={draw, circle}, clockwise] {
-        subgraph C_n [n=10, name=B, radius=2cm];
-        B 1 -- B 2; B 1 -- B 9; B 1 -- B 10;
-        B 2 -- B 3; B 2 -- B 6;
-        B 3 -- B 4; B 3 -- B 8;
-        B 4 -- B 5; B 4 -- B 10;
-        B 5 -- B 6; B 5 -- B 9;
-        B 7 -- B 8; B 7 -- B 10;
-    };
-\end{tikzpicture}
-\end{center}
-
-Justificación:
-\begin{itemize}
-    \item \( G_2 \) tiene 10 vértices.
-    \item Los grados de los vértices de \( G_2 \) son: 3, 2, 2, 3, 2, 1, 3, 1, 0, 0.
-    \item \( G_1 \) no es isomorfa a \( G_2 \) ya que, aunque tienen el mismo número de vértices y aristas, sus conjuntos de grados de vértices son diferentes.
-\end{itemize}
-
-
 \begin{array}{c|l}
 	\text{Vertex} & \text{Adjacent Vertices} \\
 	\hline
@@ -157,25 +133,6 @@ Justificación:
 
 \section*{Gráfica \( G_3 \)}
 
-\begin{center}
-\begin{tikzpicture}
-    \graph [nodes={draw, circle}, clockwise] {
-        subgraph C_n [n=6, name=C, radius=2cm];
-        C 1 -- C 2; C 1 -- C 3; C 1 -- C 4;
-        C 2 -- C 4;
-        C 3 -- C 5;
-        C 4 -- C 6;
-        C 5 -- C 6;
-    };
-\end{tikzpicture}
-\end{center}
-
-Justificación:
-\begin{itemize}
-    \item \( G_3 \) tiene 6 vértices.
-    \item Los grados de los vértices de \( G_3 \) son: 3, 1, 2, 2, 1, 0.
-\end{itemize}
-
 \begin{array}{c|l}
 	\text{Vertex} & \text{Adjacent Vertices} \\
 	\hline
@@ -217,26 +174,6 @@ Justificación:
 
 
 \section*{Gráfica \( G_4 \)}
-
-\begin{center}
-\begin{tikzpicture}
-    \graph [nodes={draw, circle}, clockwise] {
-        subgraph C_n [n=6, name=D, radius=2cm];
-        D 1 -- D 2; D 1 -- D 3; D 1 -- D 4;
-        D 2 -- D 4;
-        D 3 -- D 4; D 3 -- D 5;
-        D 4 -- D 6;
-        D 5 -- D 6;
-    };
-\end{tikzpicture}
-\end{center}
-
-Justificación:
-\begin{itemize}
-    \item \( G_4 \) tiene 6 vértices.
-    \item Los grados de los vértices de \( G_4 \) son: 3, 1, 2, 2, 1, 0.
-    \item \( G_3 \) es potencialmente isomorfa a \( G_4 \) ya que tienen el mismo número de vértices, el mismo número de aristas y el mismo conjunto de grados de vértices. 
-\end{itemize}
 
 \begin{array}{c|l}
 	\text{Vertex} & \text{Adjacent Vertices} \\
