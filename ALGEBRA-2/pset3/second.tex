@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Máximo Común Divisor usando el Algoritmo de Euclides y el Algoritmo de División}
+
+\subsection*{Para \(a = 434\) y \(b = 31\)}
+\begin{align*}
+434 & = 31 \times 14 + 0 &\quad \text{(Dividimos 434 entre 31, el residuo es 0. Según el algoritmo, hacemos } a = b \text{ y } b = \text{residuo)} \\
+\therefore \text{MCD}(434,31) & = 31 &\quad \text{(Dado que el residuo es 0, } b = 31 \text{ es el MCD)}
+\end{align*}
+
+\subsection*{Para \(a = 8611\) y \(b = -17\)}
+Dado que el MCD no cambia si uno de los números es negativo, tomamos \(b = 17\).
+\begin{align*}
+8611 & = 17 \times 506 + 5 &\quad \text{(Dividimos 8611 entre 17, el residuo es 5. Según el algoritmo, hacemos } a = b \text{ y } b = \text{residuo)} \\
+17 & = 5 \times 3 + 2 &\quad \text{(Dividimos 17 entre 5, el residuo es 2. Según el algoritmo, hacemos } a = b \text{ y } b = \text{residuo)} \\
+5 & = 2 \times 2 + 1 &\quad \text{(Dividimos 5 entre 2, el residuo es 1. Según el algoritmo, hacemos } a = b \text{ y } b = \text{residuo)} \\
+2 & = 1 \times 2 + 0 &\quad \text{(Dividimos 2 entre 1, el residuo es 0. Según el algoritmo, hacemos } a = b \text{ y } b = \text{residuo)} \\
+\therefore \text{MCD}(8611,-17) & = 1 &\quad \text{(Dado que el residuo es 0, } b = 1 \text{ es el MCD)}
+\end{align*}
+
+\end{document}
