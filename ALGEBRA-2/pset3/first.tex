@@ -1,36 +1,29 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb}
-
 \begin{document}
 
-\title{Divisibilidad del Producto de Tres Números Consecutivos}
-\maketitle
+\section*{Demostración por Inducción}
 
-\section*{Planteamiento del Problema}
-Demuestra que el producto de tres números enteros consecutivos es divisible entre 6, es decir, \(\forall n \in \mathbb{N}\) 
-\[ 6|n(n + 1)(n + 2) \]
+Para demostrar que el producto de tres números enteros consecutivos es divisible por 6, definamos la proposición \( P(n) \) tal que:
+\[ P(n): n(n + 1)(n + 2) \text{ es divisible por 6.} \]
 
-\section*{Demostración}
+\textbf{Paso base:} Consideremos \( n = 1 \):
+\[ P(1): 1(1 + 1)(1 + 2) = 6 \]
+que es claramente divisible por 6. Por lo tanto, \( P(n) \) es verdadero para \( n = 1 \).
 
-Para demostrar esto, vamos a utilizar una combinación lineal (o ecuación diofántica). Dado que \( n \), \( n+1 \), y \( n+2 \) son tres números consecutivos, al menos uno de ellos es divisible por 2 y al menos uno de ellos es divisible por 3. Podemos expresar este hecho mediante una combinación lineal de \( n \), \( n+1 \), y \( n+2 \) que sea igual a 2 o 3.
+\textbf{Hipótesis de inducción (HI):} Supongamos que \( P(k) \) es verdadero para algún número natural \( k \), es decir, 
+\[ k(k + 1)(k + 2) \text{ es divisible por 6.} \]
 
-Para demostrar que \( n(n+1)(n+2) \) es divisible por 6, debemos mostrar que hay coeficientes enteros \( a \), \( b \), y \( c \) tales que:
-\[ an + b(n+1) + c(n+2) = 6 \]
+\textbf{Paso inductivo:} Queremos demostrar que \( P(k + 1) \) es verdadero, suponiendo que \( P(k) \) es verdadero.
 
-Para el caso de divisibilidad por 2:
-\begin{enumerate}
-    \item Si \( n \) es par, entonces \( a = 1 \), \( b = 0 \), \( c = 0 \) satisface la ecuación.
-    \item Si \( n+1 \) es par, entonces \( a = 0 \), \( b = 1 \), \( c = 0 \) satisface la ecuación.
-    \item Si \( n+2 \) es par, entonces \( a = 0 \), \( b = 0 \), \( c = 1 \) satisface la ecuación.
-\end{enumerate}
+Expresando \( (k+1)(k+2)(k+3) \) usando distribución:
+\[ (k+1)(k+2)(k+3) = k(k+1)(k+2) + 3(k+1)(k+2) \]
 
-Para el caso de divisibilidad por 3:
-\begin{enumerate}
-    \item Si \( n \) es divisible por 3, entonces \( a = 1 \), \( b = 0 \), \( c = 0 \) satisface la ecuación.
-    \item Si \( n+1 \) es divisible por 3, entonces \( a = 0 \), \( b = 1 \), \( c = 0 \) satisface la ecuación.
-    \item Si \( n+2 \) es divisible por 3, entonces \( a = 0 \), \( b = 0 \), \( c = 1 \) satisface la ecuación.
-\end{enumerate}
+Por la hipótesis inductiva, sabemos que \( k(k+1)(k+2) \) es divisible por 6. Adicionalmente, \( (k+1)(k+2) \) es divisible por 6 porque al menos uno de los términos, \( (k+1) \) o \( (k+2) \), es par.
 
-Por lo tanto, hemos demostrado que al menos uno de los números es divisible por 2 y al menos uno de los números es divisible por 3, lo que implica que el producto \( n(n+1)(n+2) \) es divisible por 6.
+Por lo tanto, \( P(k + 1) \) es verdadero.
+
+Así, hemos mostrado que si \( P(k) \) es verdadero, entonces \( P(k+1) \) también lo es.
+
+Por el principio de inducción matemática, concluimos que \( n(n+1)(n+2) \) es divisible por 6 para todos los números naturales \( n \).
 
 \end{document}
