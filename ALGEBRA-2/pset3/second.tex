@@ -2,7 +2,14 @@
 \usepackage{amsmath}
 \usepackage[margin=0.5in]{geometry} % Reduce margins further to 0.5 inches.
 
+\author{David Rivera Morales}
+\title{Máximo Común Divisor usando el Algoritmo de División}
+\date{10 de septiembre de 2023}
+
+
 \begin{document}
+
+\maketitle
 
 \section*{Máximo Común Divisor usando el Algoritmo de División}
 
@@ -15,10 +22,10 @@
 \subsection*{Para \(a = 8611\) y \(b = -17\)}
 Dado que el MCD no cambia si uno de los números es negativo, tomamos \(b = 17\).
 \begin{align*}
-8611 & = 17 \times 506 + 5 &&\text{(Residuo 5)} \\
-17 & = 5 \times 3 + 2 &&\text{(Residuo 2)} \\
-5 & = 2 \times 2 + 1 &&\text{(Residuo 1)} \\
-2 & = 1 \times 2 + 0 &&\text{(Residuo 0)} \\
+8611 & = 17 \times 506 + 9 &&\text{(Residuo 9)} \\
+17 & = 9 \times 1 + 8 &&\text{(Residuo 8)} \\
+9 & = 8 \times 1 + 1 &&\text{(Residuo 1)} \\
+8 & = 1 \times 8 + 0 &&\text{(Residuo 0)} \\
 \therefore \text{MCD}(8611,-17) & = 1 
 \end{align*}
 
