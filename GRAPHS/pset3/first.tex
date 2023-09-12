@@ -48,7 +48,7 @@ Lo cual es imposible porque 83 no es un número par. Por lo tanto, la informaci�
 \textbf{Visualización del Grafo:}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.5]
+\begin{tikzpicture}[scale=2]
     % Hombres
     \foreach \i in {1,...,9} 
     {
@@ -69,6 +69,9 @@ Lo cual es imposible porque 83 no es un número par. Por lo tanto, la informaci�
             \draw[thin, opacity=0.5] (0,\i) -- (4,\j);
         }
     }
+    
+    % Resaltando la inconsistencia
+    \node at (2, 10.5) {\textcolor{red}{\textbf{Total hombres + mujeres = 83 (número impar!)}}};
 \end{tikzpicture}
 \end{center}
 
