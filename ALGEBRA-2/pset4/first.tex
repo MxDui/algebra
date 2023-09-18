@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{David Rivera Morales}
+\title{Ejercicio 1}
+\date{17 de septiembre de 2023}
+
+\begin{document}
+\maketitle
+\subsection*{1. Definición de pares ordenados}
+Encuentra \( (2k, 2k + 1) \).
+
+Sean \( k \in \mathbb{Z} \) y definimos \( x = 2k \) y \( y = 2k + 1 \). La razón por la que podemos formar infinitos pares ordenados es porque \( k \) puede ser cualquier número entero. Esto significa que \( k \) puede ser 0, 1, 2, 3, ... así como -1, -2, -3, ... y así sucesivamente. Dado que hay infinitos números enteros, hay infinitos valores posibles para \( k \), y por lo tanto, infinitos pares ordenados \( (2k, 2k + 1) \).
+
+\textbf{Ejemplo (con \( k = -3 \)):}
+\[
+x = 2(-3) = -6, \quad y = 2(-3) + 1 = -5
+\]
+
+\textbf{Ejemplo (con \( k = 5 \)):}
+\[
+x = 2(5) = 10, \quad y = 2(5) + 1 = 11
+\]
+
+
+\subsection*{2. Verificación de soluciones enteras}
+Una ecuación diofántica de la forma \( ax + by = n \) tiene solución en enteros si y solo si el MCD de \( a \) y \( b \) divide a \( n \).
+
+En nuestro caso, queremos verificar si la ecuación \( 2kx + y = 1-2ky \) tiene solución sobre los enteros. Primero, identificamos que \( a = 2k \) y \( b = 1-2k \). El MCD de \( a \) y \( b \) se denota por \( d \), y escribimos:
+
+\[
+d = \text{mcd}(2k,1-2k)
+\]
+
+Dado que el MCD es una operación binaria que es conmutativa, podemos reescribir la expresión como:
+
+\[
+\text{MCD}(2k,1-2k) = \text{MCD}(2k,-(2k-1))
+\]
+
+Notemos que el MCD de \( 2k \) y \( -(2k-1) \) es 1, ya que uno es par y el otro es impar. Dado que \( 1 \) divide a cualquier número entero, concluimos que la ecuación \( 2kx+y=1-2ky \) tiene soluciones enteras.
+
+\subsection*{3. Determinación de una solución particular}
+Buscamos un valor de \( x \) tal que la ecuación \( 2kx + y = 1-2ky \) tenga una solución entera para un valor específico de \( y \), en este caso \( y_0 = 1 \). Sustituimos \( y \):
+
+\[
+2kx + 1 = 1-2k
+\]
+
+A partir de esta expresión, despejamos \( x \):
+
+\[
+2kx = -2k \implies x = \frac{-2k}{2k} = -1
+\]
+
+Finalmente, para verificar nuestra solución, sustituimos \( x = -1 \) y \( y = 1 \) en la ecuación original:
+
+\[
+2k(-1) + 1 = 1-2k
+\]
+
+La ecuación se cumple, lo que confirma que \( x = -1 \) es una solución válida para \( y = 1 \).
+
+\subsection*{4. Soluciones generales de la ecuación}
+Encuentra todas las soluciones para \( 2kx + y = 1 - 2ky \), justificando cómo se llegó a ellas.
+
+Dado que ya hemos establecido que la ecuación tiene soluciones enteras y hemos encontrado una solución particular \( (x_0, y_0) = (-1, 1) \), todas las soluciones enteras \( (x, y) \) pueden expresarse en función de un parámetro \( t \) (que puede ser cualquier número entero) de la siguiente manera:
+
+\[
+x = -1 + (1-2k)t
+\]
+\[
+y = 1 - 2kt
+\]
+
+Por lo tanto, todas las soluciones enteras de la ecuación se describen por estas fórmulas, con \( t \) tomando cualquier valor entero.
+
+\end{document}

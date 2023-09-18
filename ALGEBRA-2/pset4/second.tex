@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{David Rivera Morales}
+\title{Ejercicio 2: Solución Paso a Paso}
+\date{17 de septiembre de 2023}
+
+\begin{document}
+\maketitle
+
+\subsection*{1. Determinación de si la ecuación tiene solución:}
+Una ecuación diofántica de la forma \( ax + by = n \) tiene solución entera si y solo si el máximo común divisor (mcd) de \( a \) y \( b \) es divisor de \( n \). 
+
+Para nuestro problema, \( a = 10 \) y \( b = 20 \). 
+
+Calculamos el mcd de 10 y 20:
+\[ 20 = 10 \times 2 + 0 \]
+Por lo que el mcd es 10.
+
+Para determinar si la ecuación tiene solución, necesitamos ver si el mcd (en este caso, 10) es divisor de \( n \) (en este caso, 100,000). Dado que \( 100,000 \) es divisible por 10, concluimos que la ecuación tiene solución entera.
+
+\subsection*{2. Encontrar una solución particular:}
+Si \( x_0, y_0 \) es una solución particular de la ecuación \( ax + by = n \), todas las soluciones enteras \( x, y \) de la ecuación se pueden expresar de la forma:
+
+\[ x = x_0 + \frac{b}{\text{mcd}(a,b)} t \]
+\[ y = y_0 - \frac{a}{\text{mcd}(a,b)} t \]
+Donde \( t \) es cualquier número entero.
+
+Para nuestra ecuación \( 10x + 20y = 100,000 \), al simplificarla y buscar una solución particular tenemos que para \( x = 5000 \):
+\[ 5000 + 2y = 10,000 \]
+\[ y = 2,500 \]
+Por lo tanto, una solución particular es \( x = 5000 \) y \( y = 2,500 \).
+\subsection*{3. Encontrar todas las soluciones enteras:}
+Usando la solución particular encontrada y las fórmulas anteriores:
+\[ x = 5000 + \frac{20}{10} t = 5000 + 2t \]
+\[ y = 2,500 - \frac{10}{10} t = 2,500 - t \]
+Donde \( t \) puede ser cualquier número entero positivo.
+
+Como ejemplo, tomando \( t = 100 \):
+\[ x = 5000 + 2(100) = 5200 \]
+\[ y = 2,500 - 100 = 2,400 \]
+Comprobando:
+\[ 10(5200) + 20(2,400) = 100,000 \]
+\[ 52,000 + 48,000 = 100,000 \]
+Por lo tanto, la solución para nuestra ecuación es \( x = 5000 + 2t \) y \( y = 2,500 - t \), donde \( t \) puede ser cualquier número entero positivo. 
+\end{document}
+
