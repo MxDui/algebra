@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\begin{document}
+
+\title{Demostración de que \(x\) y \(y\) son Coprimos}
+\author{}
+\date{}
+\maketitle
+
+\section*{Demostración}
+
+\textbf{Objetivo:} Demostrar que si \(d = (a, b)\) y \(d = ax + by\) para algunos enteros \(x\) y \(y\), entonces \(a\) y \(b\) son coprimos.
+
+\textbf{Demostración:}
+
+Para demostrarlo, vamos a probar dos cosas: primero, si \(a\) y \(b\) no son coprimos, entonces no es posible que \(ax + by = 1\). Segundo, si \(a\) y \(b\) son coprimos, entonces es posible que \(ax + by = 1\).
+
+\textit{Paso 1: Suponemos por contradicción que \(a\) y \(b\) no son coprimos.}
+
+Esto significa que \( (a, b) = d > 1 \). Por la definición de coprimos, podemos expresar \(a = Ad\) y \(b = Bd\) para algunos enteros \(A\) y \(B\).
+
+Si multiplicamos la ecuación \(ax + by = 1\) por \(d\), obtenemos:
+
+\[ axd + byd = d \]
+\[ Adx + Bdy = d \]
+
+Pero sabemos que \(d > 1\), por lo que no es posible que una combinación lineal de \(A\) y \(B\) con coeficientes enteros sea igual a 1.
+
+\textit{Paso 2: Ahora, asumimos que \(a\) y \(b\) son coprimos.}
+
+Por la identidad de Bezout, sabemos que existen enteros \(x\) y \(y\) tales que \(ax + by = 1\). Esto completa la prueba de que si \(a\) y \(b\) son coprimos, entonces es posible que \(ax + by = 1\).
+
+Por lo tanto, hemos demostrado que si \(ax + by = 1\) para algunos enteros \(x\) y \(y\), entonces \(a\) y \(b\) son coprimos.
+
+\end{document}
