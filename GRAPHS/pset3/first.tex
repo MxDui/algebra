@@ -5,74 +5,74 @@
 \begin{document}
 
 \textbf{Problema:}
-En una reunión clandestina se reunieron cierto número de mafiosos. Durante la noche de esa reunión, se realizó una redada y lograron capturar a uno de los contadores de los negocios de dicha reunión. El contador facilitó información para reducir su condena, a partir de dicha información los investigadores concluyeron que en la reunión había 83 personas y además, cada hombre conocía exactamente a nueve mujeres y cada mujer conocía exactamente a nueve hombres. Suponiendo que los investigadores no erraron sus conclusiones, determina si la información que facilitó el contador es verídica.
+En una reunión clandestina, cierto número de mafiosos se reunió. Durante la reunión, uno de los contadores fue detenido y ofreció información. Los investigadores dedujeron que había 83 personas: cada hombre conocía exactamente a nueve mujeres y cada mujer a nueve hombres. ¿Es verídica esta información?
 
 \bigskip
 
-Para determinar si la información que proporcionó el contador es verídica, necesitamos desglosar la información y usar las relaciones que se nos han dado.
+Para evaluar la veracidad, desglosemos la información:
 
-Supongamos que el número de hombres en la reunión es \( h \) y el número de mujeres es \( m \).
+Denotemos el número de hombres como \( h \) y el de mujeres como \( m \).
 
 Sabemos que:
-\begin{enumerate}
-    \item \( h + m = 83 \) (la suma total de hombres y mujeres es 83)
-\end{enumerate}
+1. \( h + m = 83 \)
 
-Dado que cada hombre conoce exactamente a 9 mujeres:
-\begin{enumerate}
-    \setcounter{enumi}{1}
-    \item El total de conexiones entre hombres y mujeres es \( 9h \).
-\end{enumerate}
+Y, basándonos en las relaciones:
 
-Y como cada mujer conoce exactamente a 9 hombres:
-\begin{enumerate}
-    \setcounter{enumi}{2}
-    \item El total de conexiones entre mujeres y hombres es también \( 9m \).
-\end{enumerate}
+2. Cada hombre tiene conexiones con 9 mujeres, lo que da \( 9h \) conexiones desde hombres a mujeres.
+3. De manera similar, hay \( 9m \) conexiones desde mujeres a hombres.
 
-Sin embargo, estas dos conexiones son equivalentes porque cuando un hombre conoce a una mujer, esa mujer conoce a ese hombre. Por lo tanto:
+Como estas conexiones son bidireccionales, tenemos:
+
 \[ 9h = 9m \]
+\[ \implies h = m \]
 
-De aquí podemos simplificar y obtener:
-\[ h = m \]
-
-Usando (1):
-\[ h + h = 83 \]
-Esto nos da:
+Con la primera ecuación:
 \[ 2h = 83 \]
 
-Lo cual es imposible porque 83 no es un número par. Por lo tanto, la información que el contador proporcionó no puede ser correcta.
+Este resultado es inconsistente, pues 83 no es divisible entre 2. Así, la información no puede ser correcta.
 
-\bigskip
 
-\textbf{Visualización del Grafo:}
+Este problema puede verse como una gráfica bipartita.
 
 \begin{center}
-\begin{tikzpicture}[scale=2]
-    % Hombres
-    \foreach \i in {1,...,9} 
-    {
-        \node at (0,\i) [circle, fill=blue!70, minimum size=0.8cm] {$H_\i$};
+\begin{tikzpicture}[scale=1.5]
+    % Nodes for men
+    \foreach \i in {1,...,5} {
+        \node at (0,\i) [circle, draw, fill=blue!30, minimum size=0.8cm] {H};
+    }
+    % Nodes for women
+    \foreach \i in {1,...,5} {
+        \node at (4,\i) [circle, draw, fill=red!30, minimum size=0.8cm] {M};
     }
 
-    % Mujeres
-    \foreach \i in {1,...,9} 
-    {
-        \node at (4,\i) [circle, fill=red!70, minimum size=0.8cm] {$M_\i$};
+    % Incomplete node representation to signify uncertainty
+    \node at (0,6.5) [circle, draw, pattern=north east lines, minimum size=0.8cm] {?};
+    \node at (4,6.5) [circle, draw, pattern=north east lines, minimum size=0.8cm] {?};
+
+    % Labeling for the inconsistent part
+    \node at (0,7.5) [above] {Hombres (h)};
+    \node at (4,7.5) [above] {Mujeres (m)};
+    \draw [red,thick,dashed] (0,0.5) -- (0,7) -- (4,7) -- (4,0.5);
+    \node at (2,-1) {\textcolor{red}{Cada H conoce 9 M's y viceversa, pero \(h + m = 83\)}};
+
+    % Conexiones (representative)
+    \foreach \i in {1,...,5} {
+        \draw[thin, opacity=0.7] (0,\i) -- (4,\i);
+        \draw[thin, dashed, opacity=0.7] (0,6.5) -- (4,\i);
     }
 
-    % Conexiones
-    \foreach \i in {1,...,9} 
-    {
-        \foreach \j in {1,...,9}
-        {
-            \draw[thin, opacity=0.5] (0,\i) -- (4,\j);
-        }
-    }
-    
-    % Resaltando la inconsistencia
-    \node at (2, 10.5) {\textcolor{red}{\textbf{Total hombres + mujeres = 83 (número impar!)}}};
+    % Key for understanding the graph
+    \node at (6,5.5) [rectangle, draw] {\begin{tabular}{c l}
+        \tikz\draw[fill=blue!30] (0,0) circle (0.5ex) & - Hombre \\
+        \tikz\draw[fill=red!30] (0,0) circle (0.5ex) & - Mujer \\
+        \tikz\draw[pattern=north east lines] (0,0) circle (0.5ex) & - Incierto \\
+        \tikz\draw[thin, opacity=0.7] (0,0) -- (0.5,0) & - Conexión conocida \\
+        \tikz\draw[thin, dashed, opacity=0.7] (0,0) -- (0.5,0) & - Conexión incierta \\
+    \end{tabular}};
 \end{tikzpicture}
 \end{center}
 
+Esta visualización indica que para cada hombre y mujer, hay conexiones directas entre ellos. Sin embargo, si el número de hombres y mujeres es el mismo, no puede sumar un total de 83 personas. Por lo tanto, la afirmación inicial es incorrecta.
+
 \end{document}
+
