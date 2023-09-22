@@ -1,36 +1,74 @@
 \documentclass{article}
+\usepackage[spanish]{babel}
 \usepackage{amsmath, amssymb, amsthm}
 
 \begin{document}
 
-\title{Demostración de que \(x\) y \(y\) son Coprimos}
-\author{}
-\date{}
+\title{Demostración de que \( x \) y \( y \) son Coprimos}
+\author{David Rivera Morales}
+\date{2023-09-21}
 \maketitle
+
+\section*{Contraejemplo}
+
+Sean \( a, b \in \mathbb{Z} \) tal que \( d = (a, b) \), ¿es cierto que \( 1 = \left(\frac{a}{d}, b\right) = 1 \)?
+
+\textbf{Contraejemplo}: Sea \( a = 8 \), \( b = 12 \). Entonces:
+\begin{align*}
+d &= (a, b) = (8, 12) = 4 \\
+\left(\frac{a}{d}, b\right) &= \left(\frac{8}{4}, 12\right) = (2, 12) = 2
+\end{align*}
+
+Por lo tanto, no siempre se cumple que \( \left(\frac{a}{d}, b\right) = 1 \), ya que en este caso concreto \( d = (a, b) = 4 \), pero \( \left(\frac{a}{d}, b\right) = 2 \neq 1 \).
+
+En conclusión, la proposición ``Sean \( a, b \in \mathbb{Z} \) tal que \( d = (a, b) \), ¿es cierto que \( 1 = \left(\frac{a}{d}, b\right) = 1 \)?'' es falsa y se puede contradecir con un contraejemplo donde \( d = (a, b) \) pero \( \left(\frac{a}{d}, b\right) \neq 1 \). Entonces no es posible demostrarla.
 
 \section*{Demostración}
 
-\textbf{Objetivo:} Demostrar que si \(d = (a, b)\) y \(d = ax + by\) para algunos enteros \(x\) y \(y\), entonces \(a\) y \(b\) son coprimos.
+\textbf{Por demostrar}: Que si \( d = (a, b) \) y \( d = ax + by \) para algunos enteros \( x \) y \( y \), entonces \( (x, y) = 1 \).
 
-\textbf{Demostración:}
+\textbf{Demostración}:
 
-Para demostrarlo, vamos a probar dos cosas: primero, si \(a\) y \(b\) no son coprimos, entonces no es posible que \(ax + by = 1\). Segundo, si \(a\) y \(b\) son coprimos, entonces es posible que \(ax + by = 1\).
+Supongamos por contradicción que \( x \) e \( y \) no son coprimos. Esto significa que tienen un divisor común mayor que 1. Llamemos a este divisor \( k \), es decir, \( k > 1 \) y \( k \) divide tanto a \( x \) como a \( y \).
 
-\textit{Paso 1: Suponemos por contradicción que \(a\) y \(b\) no son coprimos.}
+\textit{Paso 1}: Multiplicamos la ecuación \( d = ax + by \) por \( k \):
 
-Esto significa que \( (a, b) = d > 1 \). Por la definición de coprimos, podemos expresar \(a = Ad\) y \(b = Bd\) para algunos enteros \(A\) y \(B\).
+\[ dk = akx + bky \]
 
-Si multiplicamos la ecuación \(ax + by = 1\) por \(d\), obtenemos:
+\textit{Paso 2}: Ahora, como \( d = (a, b) \) es el máximo común divisor de \( a \) y \( b \), por el Lema de Bézout existen números enteros \( m \) y \( n \) tales que:
 
-\[ axd + byd = d \]
-\[ Adx + Bdy = d \]
+\[ a = dm \]
+\[ b = dn \]
 
-Pero sabemos que \(d > 1\), por lo que no es posible que una combinación lineal de \(A\) y \(B\) con coeficientes enteros sea igual a 1.
+Sustituimos estas expresiones en la ecuación \( dk = akx + bky \) para obtener:
 
-\textit{Paso 2: Ahora, asumimos que \(a\) y \(b\) son coprimos.}
+\[ dk = dmkx + dnky \]
 
-Por la identidad de Bezout, sabemos que existen enteros \(x\) y \(y\) tales que \(ax + by = 1\). Esto completa la prueba de que si \(a\) y \(b\) son coprimos, entonces es posible que \(ax + by = 1\).
+Reorganizamos los términos y factorizando:
 
-Por lo tanto, hemos demostrado que si \(ax + by = 1\) para algunos enteros \(x\) y \(y\), entonces \(a\) y \(b\) son coprimos.
+\[ dk = d(mkx + nky) \]
+
+\textit{Paso 3}: Dividimos ambos lados por \( d \):
+
+\[ k = mkx + nky \]
+
+\textbf{Contradicción}: Recordemos que \( d = ax + by \). Por lo tanto, \( d \) también es una combinación lineal de \( x \) y \( y \). Pero \( d \) es el máximo común divisor de \( a \) y \( b \), lo que implica que \( d \) es el mayor número que puede ser expresado como una combinación lineal de \( x \) y \( y \).
+
+Dado que \( k \) es un divisor común de \( x \) e \( y \) y \( k > 1 \), tendríamos que \( k \leq d \). Pero, por la ecuación \( k = mkx + nky \), tenemos que \( k \) también puede ser expresado como una combinación lineal de \( x \) e \( y \), lo cual es una contradicción ya que \( d \) debería ser el único número más grande que puede obtenerse de esa manera.
+
+Por lo tanto, nuestra suposición inicial de que \( (x, y) \neq 1 \) debe ser falsa. Esto significa que \( x \) e \( y \) son coprimos, es decir, \( (x, y) = 1 \).
+
+\textbf{Nota:} El Lema de Bézout establece que el máximo común divisor de dos enteros \( a \) y \( b \) (no ambos nulos) se puede expresar como una combinación lineal de \( a \) y \( b \), es decir, \( \text{MCD}(a,b) = ax_0 + by_0 \) para algunos enteros \( x_0 \) y \( y_0 \). 
+\textbf{Demostración del Lema de Bézout}:
+
+Sea \( S \) el conjunto de todas las combinaciones lineales enteras de la forma \( ax + by \), donde \( x \) e \( y \) son enteros. Elegimos el mínimo elemento positivo, \( d \), de este conjunto.
+
+Suponemos que \( d \) es el máximo común divisor de \( a \) y \( b \). 
+
+Además,consideremos la división de \( a \) entre \( d \). Por el algoritmo de división, deben existir enteros \( q \) y \( r \) con \( 0 \leq r < d \) tales que \( a = qd + r \). Esto se puede reescribir como \( r = a - qd \). Dado que \( a \) y \( d \) pertenecen a \( S \), \( r \) también debe pertenecer a \( S \). Sin embargo, como \( d \) es el mínimo positivo de \( S \) y \( r < d \), debemos tener \( r = 0 \). Por lo tanto, \( d \) divide a \( a \). Análogamente, se puede demostrar que \( d \) divide a \( b \).
+
+Ahora, supongamos que \( d' \) es cualquier otro divisor común de \( a \) y \( b \). Dado que \( d' \) divide a ambos \( a \) y \( b \), también debe dividir a cualquier combinación lineal de \( a \) y \( b \), y por lo tanto divide a todos los elementos de \( S \), incluido \( d \). Esto implica que \( d' \leq d \). Como \( d \) es un divisor común y ningún divisor común es mayor que \( d \), concluimos que \( d \) es el MCD de \( a \) y \( b \).
+
+Por lo tanto, hemos demostrado que el máximo común divisor \( \text{MCD}(a,b) \) puede expresarse como una combinación lineal de \( a \) y \( b \).
 
 \end{document}

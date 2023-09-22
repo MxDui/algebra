@@ -1,24 +1,63 @@
 \documentclass{article}
+\usepackage[spanish]{babel}
 \usepackage{amsmath}
 
 \begin{document}
 
-\section*{Problema de la Póliza de Seguro y su Resolución}
+\title{Problema de la Póliza de Seguro y su Resolución}
+\author{David Rivera Morales}
+\date{2023-09-21}
 
-Partimos de la ecuación:
-\[ 100c + p - 23 = 200p + 2c \]
-Que se simplifica a:
-\[ 98c - 199p = 23 \]
+\maketitle
 
-Aislando \( c \) obtenemos:
-\[ c = \frac{199p + 23}{98} \]
+El enunciado indica que:
+\begin{itemize}
+\item El valor de la póliza es de $p$ pesos con $c$ centavos.
+\item Por error, al asegurado se le da $c$ pesos y $p$ centavos.
+\item El asegurado gasta 23 centavos.
+\item En ese momento tiene $2p$ pesos y $2c$ centavos.
+\end{itemize}
 
-Para encontrar una solución, debemos probar valores enteros para \( p \) hasta que el numerador \( 199p + 23 \) sea divisible por 98, resultando en un valor entero para \( c \) entre 0 y 99.
+Podemos traducir esta información a ecuaciones, llamando $V$ al valor original de la póliza en centavos. Entonces:
+\begin{equation}
+V = 100c + p
+\end{equation}
 
-Probando con \( p = 1 \):
-\[ c = \frac{199(1) + 23}{98} = \frac{222}{98} \]
-Esto no resulta en un valor entero para \( c \), por lo que \( p = 1 \) no es una solución.
+Al asegurado se le dio $c$ pesos (equivalentes a $100c$ centavos) y $p$ centavos. Tras gastar 23 centavos, le quedaron:
+\begin{equation}
+(100c + p) - 23 \text{ centavos}
+\end{equation}
 
-El proceso se repite para diferentes valores de \( p \) hasta encontrar una solución adecuada.
+El enunciado indica que en ese momento tenía $2p$ pesos y $2c$ centavos, esto es:
+\begin{equation}
+200p + 2c \text{ centavos}
+\end{equation}
+
+Igualando las expresiones obtenemos:
+\begin{equation}
+100c + p - 23 = 200p + 2c
+\end{equation}
+
+Despejando $c$:
+\begin{align}
+100c - 23 &= 199p + 2c \\
+98c &= 199p + 23 \\
+c &= \frac{199p + 23}{98}
+\end{align}
+
+Para obtener una solución entera, buscamos un valor de $p$ tal que $199p + 23$ sea divisible entre 98 (es decir, entre 2 y 49).
+
+Probando con $p = 47$:
+\begin{align*}
+199(47) + 23 &= 9453 \\
+&= 94 \times 100 + 53
+\end{align*}
+
+Sustituyendo en la ecuación para $c$:
+\begin{equation}
+c = \frac{199(47) + 23}{98} = 96
+\end{equation}
+
+Por lo tanto, la suma asegurada es 47 pesos con 96 centavos
 
 \end{document}
