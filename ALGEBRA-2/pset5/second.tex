@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\begin{document}
+
+\section*{Demostraciones}
+
+\subsection*{1. Demostración de \(a^2 \equiv 0 \) (mod 4) para \( a \) par}
+Si \( a \) es par, entonces puede ser escrito como \( a = 2k \) para algún \( k \in \mathbb{Z} \).
+
+Entonces,
+\begin{align*}
+a^2 &= (2k)^2 \\
+&= 4k^2
+\end{align*}
+Esto implica que \( a^2 \) es divisible por 4, y por lo tanto, \( a^2 \equiv 0 \) (mod 4).
+
+\subsection*{2. Demostración de \(b^2 \equiv 1 \) (mod 4) para \( b \) impar}
+Si \( b \) es impar, entonces puede ser escrito como \( b = 2k + 1 \) para algún \( k \in \mathbb{Z} \).
+
+Entonces,
+\begin{align*}
+b^2 &= (2k + 1)^2 \\
+&= 4k^2 + 4k + 1
+\end{align*}
+El término \( 4k^2 + 4k \) es claramente divisible por 4, lo que nos deja con \( b^2 \equiv 1 \) (mod 4).
+
+\subsection*{3. Demostración de \(a^2 - b^2 \equiv -1 \) (mod 4)}
+Usando las demostraciones anteriores, sabemos que:
+\[ a^2 \equiv 0 \] (mod 4) \\
+\[ b^2 \equiv 1 \] (mod 4)
+
+Restando las dos congruencias obtenemos:
+\[ a^2 - b^2 \equiv 0 - 1 \] (mod 4)
+\[ \implies a^2 - b^2 \equiv -1 \] (mod 4).
+
+\end{document}
