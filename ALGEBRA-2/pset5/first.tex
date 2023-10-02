@@ -1,23 +1,28 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, amsthm}
 
+\author{David Rivera Morales}
+\title{Demostración}
+\date{1 de octubre de 2023}
+
+
 \begin{document}
 
-\section*{Demostración}
-Dado que \( bz \equiv 0 \) (mod \( a \)), podemos afirmar que \( a \) divide \( bz \).
+\maketitle
+Sean \( a, b, z \in \mathbb{Z} \) números enteros tales que \( (a, b) = 1 \) y \( bz \equiv 0 \) (mod \( a \)). Dado que \( bz \equiv 0 \) (mod \( a \)), podemos afirmar que \( a \) divide \( bz \).
 
-Queremos probar que \( z \equiv 0 \) (mod \( a \)) utilizando el Lema de Euclides.
+\textbf{P.D} Demostrar que \( z \equiv 0 \) (mod \( a \)).
 
 \textbf{Lema de Euclides:} Si \( m \) y \( n \) son enteros coprimos y \( m \) divide \( pk \) para algún entero \( k \), entonces \( m \) divide \( k \).
 
-\textit{Estrategia de demostración:} La elección de utilizar el Lema de Euclides se basa en su utilidad al manejar situaciones en las cuales tenemos dos números que son coprimos y uno de ellos divide un producto. Dado que \( (a, b) = 1 \) y \( bz \equiv 0 \) (mod \( a \)), se ajusta a la situación en la que el Lema de Euclides puede ser aplicado.
-
-\begin{proof}
-Dado que \( bz \equiv 0 \) (mod \( a \)), sabemos que \( a \) divide \( bz \).
-
-Por el Lema de Euclides, dado que \( a \) y \( b \) son coprimos y \( a \) divide \( bz \), entonces \( a \) también divide \( z \).
-
-Si \( a \) divide \( z \), entonces \( z \equiv 0 \) (mod \( a \)). 
-\end{proof}
+\begin{Demostración}
+\begin{enumerate}
+    \item Partimos de la suposición de que \( bz \equiv 0 \) (mod \( a \)). Esto implica que \( a \) divide \( bz \).
+    \item Dado que \( (a, b) = 1 \) (lo que significa que \( a \) y \( b \) son coprimos), y usando el Lema de Euclides, si \( a \) divide el producto \( bz \), entonces \( a \) debe dividir \( z \).
+    \item Usando la definición de números coprimos, sabemos que \( \text{mcd}(a, b) = 1 \). Dado que \( bz \equiv 0 \) (mod \( a \)), esto significa que \( a \) divide \( bz \). Por el Lema de Euclides, dado que \( \text{mcd}(a, b) = 1 \) y \( a \) divide \( bz \), \( a \) también divide \( z \).
+    \item Finalmente, si \( a \) divide \( z \), entonces por definición tenemos que \( z \equiv 0 \) (mod \( a \)).
+\end{enumerate}
+Por lo tanto, hemos demostrado que si \( bz \equiv 0 \) (mod \( a \)), entonces \( z \equiv 0 \) (mod \( a \)).
+\end{Demostración}
 
 \end{document}
