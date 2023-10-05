@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\begin{document}
+
+\section*{Problema}
+3.Sea \( G \) una gráfica con exactamente 2 vértices de grado impar, denominados \( u \) y \( v \). Demuestra que \( G \) tiene al menos una uv-trayectoria.
+
+\begin{Dem.}
+Si \( G \) es conexa, entonces \( G \) tiene una uv-trayectoria. Ahora el caso donde \( G \) es desconexa.
+
+Sea \( K \) la componente conexa de \( G \) tal que \( u \in K \). Dado que \( K \) es una gráfica, debe contener un número par de vértices de grado impar ya que
+\begin{equation}
+\sum_{w \in V(K)} \text{grado}(w) = 2|E(K)|.
+\end{equation}
+
+Esto implica que hay al menos un vértice más de grado impar en \( K \). Dado que \( G \) contiene solo dos vértices de grado impar, debe ser el caso de que \( v \in K \), lo que indica que existe una uv-trayectoria en \( K \).
+
+Por lo tanto, en ambos casos, tanto si \( G \) es conexa como desconexa, se tiene que \( G \) contiene al menos una uv-trayectoria.
+
+\end{Dem.}
+
+\end{document}
