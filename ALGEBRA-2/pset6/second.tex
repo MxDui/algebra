@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\title{Álgebra Superior II - Tarea 6 - Ejericio 2}
+\author{David Rivera Morales}
+\date{7 de octubre de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Dé un contraejemplo para atestiguar la falsedad de cada una de las siguientes afirmaciones:}
+
+\section*{Problema 1}
+Para todo entero \( n > 1 \) y para cualesquiera \( a, b, c \in \mathbb{Z} \), siempre que \( a \cdot c \equiv b \cdot c \) (mod \( n \)), se tiene que \( a \equiv b \) (mod \( n \)).
+
+\section*{Contraejemplo}
+Para refutar la afirmación, necesitamos encontrar un contraejemplo. Eso significa que necesitamos encontrar valores de \( n \), \( a \), \( b \), y \( c \) tales que:
+
+\begin{enumerate}
+    \item \( n > 1 \)
+    \item \( a \cdot c \equiv b \cdot c \) (mod \( n \))
+    \item \( a \not\equiv b \) (mod \( n \))
+\end{enumerate}
+
+Consideremos el módulo \( n = 6 \). Tomemos:
+
+\[
+\begin{aligned}
+    a &= 2 \\
+    b &= 4 \\
+    c &= 3 \\
+\end{aligned}
+\]
+
+Aunque \( 2 \times 3 \equiv 4 \times 3 \) (mod 6), tenemos \( 2 \not\equiv 4 \) (mod 6).
+
+Por lo tanto, los valores:
+\[
+\begin{aligned}
+    n &= 6 \\
+    a &= 2 \\
+    b &= 4 \\
+    c &= 3 \\
+\end{aligned}
+\]
+son un contraejemplo que refuta la afirmación dada.
+
+\section*{Problema 2}
+Sean \( n > 1 \) y \( a, b, c, d \in \mathbb{Z} \). Si \( a+c \equiv b+d \) (mod \( n \)), entonces \( a \equiv b \) (mod \( n \)) y \( c \equiv d \) (mod \( n \)).
+
+\section*{Contraejemplo}
+
+Para refutar la afirmación, buscamos un contraejemplo. Esto significa que deseamos encontrar valores de \( n \), \( a \), \( b \), \( c \), y \( d \) tales que:
+
+\begin{enumerate}
+    \item \( n > 1 \)
+    \item \( a + c \equiv b + d \) (mod \( n \))
+    \item \( a \not\equiv b \) (mod \( n \)) o \( c \not\equiv d \) (mod \( n \))
+\end{enumerate}
+
+Consideremos el módulo \( n = 5 \). Elijamos:
+\[
+\begin{aligned}
+    a &= 1 \\
+    b &= 2 \\
+    c &= 4 \\
+    d &= 3 \\
+\end{aligned}
+\]
+
+Observamos que:
+\[
+\begin{aligned}
+    a + c &= 1 + 4 = 5 \\
+    b + d &= 2 + 3 = 5 \\
+\end{aligned}
+\]
+
+Por lo tanto, \( a + c \equiv b + d \) (mod 5).
+
+Sin embargo:
+\[
+\begin{aligned}
+    a &= 1 \not\equiv 2 = b \quad \text{(mod 5)} \\
+    c &= 4 \not\equiv 3 = d \quad \text{(mod 5)} \\
+\end{aligned}
+\]
+
+Así que \( a \) no es congruente con \( b \) y \( c \) no es congruente con \( d \) módulo 5.
+
+Por lo tanto, los valores:
+\[
+\begin{aligned}
+    n &= 5 \\
+    a &= 1 \\
+    b &= 2 \\
+    c &= 4 \\
+    d &= 3 \\
+\end{aligned}
+\]
+son un contraejemplo que refuta la afirmación dada.
+
+\end{document}
