@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\title{Álgebra Superior II - Tarea 6 - Ejericio 1}
+\author{David Rivera Morales}
+\date{\today} 
+
+\maketitle
+
+\section*{Teorema}
+Sean \( a, b \in \mathbb{Z} \) y \( p \) un número primo. Si \( a^2 \equiv b^2 \) (mod \( p \)), entonces \( a \equiv \pm b \) (mod \( p \)).
+
+\section*{Demostración}
+
+Dado que \( a^2 \equiv b^2 \) (mod \( p \)), podemos reescribirlo como:
+\[ a^2 - b^2 \equiv 0 \] (mod \( p \))
+
+Factorizando la expresión del lado izquierdo:
+\[ (a + b)(a - b) \equiv 0 \] (mod \( p \))
+
+Dado que \( p \) es primo, la única manera de que un producto sea congruente a 0 módulo \( p \) es que al menos uno de los factores sea congruente a 0 módulo \( p \). Esto implica que:
+\[ a + b \equiv 0 \] (mod \( p \))
+o
+\[ a - b \equiv 0 \] (mod \( p \))
+
+De la primera ecuación, obtenemos:
+\[ a \equiv -b \] (mod \( p \))
+
+De la segunda ecuación, obtenemos:
+\[ a \equiv b \] (mod \( p \))
+
+Por lo tanto, si \( a^2 \equiv b^2 \) (mod \( p \)), entonces \( a \equiv \pm b \) (mod \( p \)).
+
+\end{document}
