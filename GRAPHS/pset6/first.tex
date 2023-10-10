@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Resolución del problema de las carreteras}
+\author{David Rivera Morales}
+\maketitle
+
+\section{Planteamiento del problema}
+Una red de carreteras pasa por 35 ciudades. Si existe una única carretera entre cualesquiera dos ciudades, y además se sabe que:
+\begin{itemize}
+    \item 25 son terminales de las carreteras.
+    \item En 2 solo llegan dos carreteras.
+    \item En 3 llegan 4 carreteras.
+    \item En 1 llega 5 carreteras.
+    \item En 2 llegan 6 carreteras.
+    \item La red tiene dos ciudades donde llegan $x$ carreteras.
+\end{itemize}
+¿Cuál es el valor de $x$?
+
+\section{Solución}
+Para resolver el problema, consideramos el número total de aristas basado en la información proporcionada:
+\begin{itemize}
+    \item 25 ciudades contribuyen con $25 \times 1 = 25$ al grado total.
+    \item 2 ciudades contribuyen con $2 \times 2 = 4$ al grado total.
+    \item 3 ciudades contribuyen con $3 \times 4 = 12$ al grado total.
+    \item 1 ciudad contribuye con $1 \times 5 = 5$ al grado total.
+    \item 2 ciudades contribuyen con $2 \times 6 = 12$ al grado total.
+    \item 2 ciudades contribuyen con $2x$ al grado total.
+\end{itemize}
+
+La suma total de estos grados debe ser igual al doble del número de aristas. Como hay una carretera única entre cualesquiera dos ciudades y hay 35 ciudades, el número total de carreteras es $\frac{35 \times 34}{2} = 595$. 
+
+Por lo tanto, planteamos la ecuación:
+\[
+25 + 4 + 12 + 5 + 12 + 2x = 2 \times 595
+\]
+
+Resolviendo esta ecuación, encontramos que:
+\[
+x = 566
+\]
+
+Por lo tanto, hay dos ciudades en la red donde llegan 566 carreteras a cada una.
+
+\end{document}

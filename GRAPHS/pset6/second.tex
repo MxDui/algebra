@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\title{Árboles cuyo complemento también es un árbol}
+\author{ChatGPT}
+\maketitle
+
+\section{Introducción}
+Caracterizamos todos los árboles tales que su complemento también es un árbol, basándonos en definiciones y propiedades básicas de árboles y grafos complementarios.
+
+\section{Definiciones}
+\begin{itemize}
+    \item Un \textbf{árbol} es un grafo conexo sin ciclos.
+    \item El \textbf{complemento} de un grafo $G$ es otro grafo que tiene el mismo conjunto de vértices que $G$, pero cuyas aristas son precisamente las que no están en $G$.
+\end{itemize}
+
+\section{Observaciones}
+\begin{enumerate}
+    \item Un árbol con $n$ vértices tiene $n - 1$ aristas.
+    \item Un grafo completo con $n$ vértices tiene $\frac{n(n - 1)}{2}$ aristas.
+    \item Si el complemento de un grafo $G$ es un árbol, entonces el complemento debe tener $n - 1$ aristas.
+\end{enumerate}
+
+\section{Solución}
+Dado un árbol $T$ con $n$ vértices y $n - 1$ aristas, su complemento $T'$ tendrá:
+\[
+\frac{n(n - 1)}{2} - n + 1
+\]
+aristas. Si el complemento $T'$ es también un árbol, entonces debe tener $n - 1$ aristas. Esto nos lleva a la ecuación:
+\[
+\frac{n(n - 1)}{2} - n + 1 = n - 1
+\]
+Resolviendo esta ecuación, encontramos que los posibles valores de $n$ son 1 y 4.
+
+\section{Conclusión}
+Los únicos árboles cuyos complementos también son árboles son aquellos que tienen 1 o 4 vértices. Cuando tienen 4 vértices, el árbol original es un camino simple y su complemento es una estrella.
+
+\end{document}
