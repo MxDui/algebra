@@ -2,9 +2,6 @@
 
 \begin{document}
 
-\title{Resolución del problema de las carreteras}
-\author{David Rivera Morales}
-\maketitle
 
 \section{Planteamiento del problema}
 Una red de carreteras pasa por 35 ciudades. Si existe una única carretera entre cualesquiera dos ciudades, y además se sabe que:
@@ -18,8 +15,10 @@ Una red de carreteras pasa por 35 ciudades. Si existe una única carretera entre
 \end{itemize}
 ¿Cuál es el valor de $x$?
 
-\section{Solución}
-Para resolver el problema, consideramos el número total de aristas basado en la información proporcionada:
+\section{Solución basada en la teoría de árboles}
+Para resolver el problema, consideraremos la red de carreteras como un árbol. En un árbol, la suma de los grados de todos los nodos es igual al doble del número de aristas. Dado que hay 35 ciudades (nodos), hay 34 carreteras (aristas). 
+
+Vamos a calcular el grado total basado en la información proporcionada:
 \begin{itemize}
     \item 25 ciudades contribuyen con $25 \times 1 = 25$ al grado total.
     \item 2 ciudades contribuyen con $2 \times 2 = 4$ al grado total.
@@ -29,18 +28,16 @@ Para resolver el problema, consideramos el número total de aristas basado en la
     \item 2 ciudades contribuyen con $2x$ al grado total.
 \end{itemize}
 
-La suma total de estos grados debe ser igual al doble del número de aristas. Como hay una carretera única entre cualesquiera dos ciudades y hay 35 ciudades, el número total de carreteras es $\frac{35 \times 34}{2} = 595$. 
-
 Por lo tanto, planteamos la ecuación:
 \[
-25 + 4 + 12 + 5 + 12 + 2x = 2 \times 595
+25 + 4 + 12 + 5 + 12 + 2x = 2 \times 34
 \]
 
 Resolviendo esta ecuación, encontramos que:
 \[
-x = 566
+2x = 10 \Rightarrow x = 5
 \]
 
-Por lo tanto, hay dos ciudades en la red donde llegan 566 carreteras a cada una.
+Por lo tanto, hay dos ciudades en la red donde llegan 5 carreteras a cada una.
 
 \end{document}
