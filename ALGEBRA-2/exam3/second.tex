@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+
+\title{Ejercicio 2 - Demostración}
+\author{David Rivera Morales}
+\date{12 de Octubre de 2023}
+
+\maketitle
+
+\section{Pequeño Teorema de Fermat}
+El Pequeño Teorema de Fermat establece que si \( p \) es un número primo y \( a \) es un número entero que no es divisible por \(p\), entonces:
+\[a^{p-1} \equiv 1 \pmod{p}\]
+En palabras menos formales, al elevar un número \( a \) a la potencia \( p-1 \) y tomar el módulo \( p \), obtenemos 1.
+
+\section{Enunciado}
+Dado un número primo impar \(p\), demostrar que:
+\[1^p + 2^p + \dots + (p-1)^p \equiv 0 \pmod{p}\]
+
+\section{Demostración}
+\begin{proof}
+Para cada número \(a\) en el conjunto \(\{1, 2, \dots, p-1\}\), existe un único número \(b\) en el mismo conjunto tal que:
+\[a \cdot b \equiv 1 \pmod{p}\]
+Esto se debe a la existencia de un inverso multiplicativo para cada número \(a\) en el conjunto, módulo \(p\).
+
+Por el Pequeño Teorema de Fermat, tenemos:
+\[a^{p-1} \equiv 1 \pmod{p}\]
+Multiplicando ambos lados por \(a\), obtenemos:
+\[a^p \equiv a \pmod{p}\]
+
+Sumando estos valores para \(a = 1, 2, \dots, p-1\), tenemos:
+\[1^p + 2^p + \dots + (p-1)^p \equiv 1 + 2 + \dots + (p-1) \pmod{p}\]
+
+La suma de los primeros \(p-1\) números naturales es:
+\[\frac{(p-1)(p)}{2}\]
+
+Dado que \(p\) es impar, \(p-1\) es par. Por lo tanto, \(\frac{p(p-1)}{2}\) es un entero. Tomando módulo \(p\), obtenemos:
+\[\frac{p(p-1)}{2} \equiv 0 \pmod{p}\]
+
+Por lo tanto, 
+\[1^p + 2^p + \dots + (p-1)^p \equiv 0 \pmod{p}\]
+\end{proof}
+
+\end{document}

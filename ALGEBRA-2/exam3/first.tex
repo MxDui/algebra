@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+
+\title{Ejercicio 1 - Demostración}
+\author{David Rivera Morales}
+\date{12 de Octubre de 2023}
+
+\maketitle
+
+\textbf{Ejercicio:} Utilizando el pequeño teorema de Fermat, prueba que el inverso multiplicativo de $78^{16} \mod 2017$ tiene como representante a $78^{2000}$, teniendo en cuenta que 2017 es primo.
+
+\textbf{Solución:}
+
+Dado el pequeño teorema de Fermat, sabemos que si \( p \) es un número primo y \( a \) no es divisible por \( p \), entonces:
+\[ a^{p-1} \equiv 1 \mod p \]
+
+Para este caso en particular, \( a = 78 \) y \( p = 2017 \), por lo que:
+\[ 78^{2016} \equiv 1 \mod 2017 \]
+
+Ahora, multiplicamos ambos lados de esta ecuación por \( 78^{16} \), de lo que obtenemos:
+\[ 78^{2016} \times 78^{16} \equiv 78^{16} \mod 2017 \]
+\[ 78^{2032} \equiv 78^{16} \mod 2017 \]
+
+Usando el pequeñito teorema de Fermat nuevamente, sabemos que \( 78^{2016} \equiv 1 \mod 2017 \). Por lo tanto, podemos reescribir \( 78^{2032} \) como \( 78^{2016} \times 78^{16} \), lo se puede ver como:
+\[ 78^{16} \times 78^{2016} \equiv 78^{16} \mod 2017 \]
+
+Ya que \( 78^{2016} \equiv 1 \mod 2017 \), la ecuación anterior se simplifica a:
+\[ 78^{16} \times 1 \equiv 78^{16} \mod 2017 \]
+
+Para encontrar el inverso multiplicativo de \( 78^{16} \mod 2017 \), multiplicamos ambos lados de la ecuación por \( 78^{2000} \) para obtener:
+
+\[ 78^{16} \times 78^{2000} \equiv 1 \mod 2017 \] 
+
+Por lo tanto, el inverso multiplicativo de \( 78^{16} \mod 2017 \) es \( 78^{2000} \).
+
+\end{document}
