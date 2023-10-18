@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Soporte para caracteres en español
 \usepackage{listings} % Para código
 \usepackage{graphicx} % Para gráficos
 \usepackage{tikz} % Para dibujar gráficas
@@ -14,18 +15,19 @@
     flexclrs=true,
     breaklines=true,
     postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    extendedchars=true,
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ñ}{{\~N}}1
 }
 
 \title{Búsqueda en Gráficas y Árbol Generador}
-\author{Tu Nombre}
-\date{\today}
+\date{18 de Octubre de 2023}
 
 \begin{document}
 \maketitle
 
-\section{Algoritmo de Búsqueda en Gráficas (BFS)}
+\section{Algoritmo de Búsqueda en Gráficas}
 
-El algoritmo presentado a continuación es una implementación de BFS (Búsqueda en Anchura):
+El algoritmo presentado a continuación es una implementación del visto en clase con Python para la búsqueda en gráficas. Se utiliza una lista \( C \) para almacenar los vértices que se van coloreando, y un conjunto \( colored \) para almacenar los vértices que ya han sido coloreados. El algoritmo recibe como parámetros la gráfica \( G \) y el vértice de inicio \( r \).
 
 \begin{lstlisting}
 def search_in_graph(G, start_vertex):
@@ -65,13 +67,13 @@ def search_in_graph(G, start_vertex):
 La gráfica \( G \) se describe con los siguientes vértices y aristas:
 
 \begin{tikzpicture}
-    \node[draw, circle] (u) at (0,2) {u};
-    \node[draw, circle] (v) at (2,2) {v};
-    \node[draw, circle] (w) at (4,2) {w};
-    \node[draw, circle] (x) at (1,0) {x};
-    \node[draw, circle] (y) at (3,0) {y};
-    \node[draw, circle] (z) at (2,-2) {z};
-    \node[draw, circle] (s) at (4,-2) {s};
+    \node[draw, circle] (u) at (0,5) {u};
+    \node[draw, circle] (v) at (4.5,5) {v};
+    \node[draw, circle] (w) at (6,7) {w};
+    \node[draw, circle] (x) at (3,7) {x};
+    \node[draw, circle] (y) at (3,3) {y};
+    \node[draw, circle] (z) at (6,3) {z};
+    \node[draw, circle] (s) at (9,5) {s};
     
     \draw (u) -- (x);
     \draw (u) -- (y);
@@ -87,22 +89,80 @@ La gráfica \( G \) se describe con los siguientes vértices y aristas:
     \draw (z) -- (s);
 \end{tikzpicture}
 
-\section{Procedimiento}
+\section{Árbol Generador con el Algoritmo de Búsqueda en Gráficas}
 
-Después de ejecutar el algoritmo de búsqueda en anchura con el vértice inicial \( u \), obtenemos el siguiente procedimiento:
+Para esto definimos otro método que recibe como parámetros la gráfica \( G \) y el vértice de inicio \( r \), y regresa el árbol generador \( T \) de la gráfica \( G \) con raíz en \( r \) que utiliza el algoritmo de búsqueda en gráficas.
+
+\begin{lstlisting}
+def print_generating_tree(G, start_vertex):
+    # Utiliza el algoritmo BFS para obtener el árbol generador
+    _, tree_edges = search_in_graph(G, start_vertex)
+    
+    # Imprime el árbol generador
+    output = "Árbol Generador:\n"
+    for edge in tree_edges:
+        output += f"{edge[0]} -- {edge[1]}\n"
+    return output.strip()
+
+# Imprimir el árbol generador para la gráfica G con vértice de inicio u
+print(print_generating_tree(G, "u"))
+\end{lstlisting}
+
+\section{Pasos del Algoritmo}
 
 \begin{enumerate}
-    \item Inicializamos con el vértice \( u \).
-    \item Exploramos vecinos de \( u \): \( x \) y \( y \). Coloreamos \( x \).
-    \item Exploramos vecinos de \( x \): \( v \), \( w \). Coloreamos \( v \).
-    \item Exploramos vecinos de \( v \): \( x \), \( w \), \( y \), \( z \). Coloreamos \( w \).
-    \item Exploramos vecinos de \( w \): \( v \), \( x \), \( s \), \( z \). Coloreamos \( s \).
-    \item Exploramos vecinos de \( s \): \( w \) y \( z \). Coloreamos \( z \).
-    \item Exploramos vecinos de \( z \): \( y \). Coloreamos \( y \).
+    \item Inicializando con el vértice u.
+    \item Vértice x coloreado y agregado a C desde u.
+    \item Vértice y coloreado y agregado a C desde u.
+    \item Vértice u removido de C.
+    \item Vértice v coloreado y agregado a C desde x.
+    \item Vértice w coloreado y agregado a C desde x.
+    \item Vértice x removido de C.
+    \item Vértice z coloreado y agregado a C desde y.
+    \item Vértice y removido de C.
+    \item Vértice v removido de C.
+    \item Vértice s coloreado y agregado a C desde w.
+    \item Vértice w removido de C.
+    \item Vértice z removido de C.
+    \item Vértice s removido de C.
+    \item Finalizado. Todos los vértices han sido coloreados.
 \end{enumerate}
 
-El árbol generador resultante se puede describir mediante las aristas que fueron utilizadas para explorar nuevos vértices:
 
-\[ u-x, x-v, v-w, w-s, s-z, z-y \]
+Una vez ejecutado el código anterior, se obtiene la siguiente salida:
+
+\begin{lstlisting}
+Árbol Generador:
+u -- x
+u -- y
+x -- v
+x -- w
+y -- z
+w -- s
+\end{lstlisting}
+
+
+
+
+\section{Gráfica del Árbol Generador}
+
+\begin{tikzpicture}
+    \node[draw, circle] (u) at (0,5) {u};
+    \node[draw, circle] (x) at (2,7) {x};
+    \node[draw, circle] (y) at (2,3) {y};
+    \node[draw, circle] (v) at (4,7) {v};
+    \node[draw, circle] (w) at (4,5) {w};
+    \node[draw, circle] (z) at (4,3) {z};
+    \node[draw, circle] (s) at (6,5) {s};
+    
+    \draw (u) -- (x);
+    \draw (u) -- (y);
+    \draw (x) -- (v);
+    \draw (x) -- (w);
+    \draw (y) -- (z);
+    \draw (w) -- (s);
+\end{tikzpicture}
+
+Este árbol generador es el mismo que se obtiene al ejecutar el algoritmo de búsqueda en gráficas con raíz en \( u \).
 
 \end{document}
