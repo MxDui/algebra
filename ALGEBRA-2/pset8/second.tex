@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\title{Ejercicio 2 - Tarea 8}
+\author{David Rivera Morales}
+\date{29 de Octubre de 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problema}
+
+Usando la expresión de la Fórmula de De Moivre, encuentre las raíces cuartas de \(-16\).
+
+\section*{Solución}
+
+La fórmula de De Moivre nos dice que si \( z = r(\cos \theta + i \sin \theta) \), entonces:
+
+\[
+z^n = r^n (\cos(n\theta) + i \sin(n\theta))
+\]
+
+Para \(-16\), podemos representarlo en su forma polar como:
+
+\[
+-16 = 16(\cos \pi + i \sin \pi)
+\]
+
+Buscamos \( z \) tal que:
+
+\[
+z^4 = 16(\cos \pi + i \sin \pi)
+\]
+
+Usando la fórmula de De Moivre:
+
+\[
+z = 16^{\frac{1}{4}} \left( \cos\left(\frac{\pi + 2\pi k}{4}\right) + i \sin\left(\frac{\pi + 2\pi k}{4}\right) \right)
+\]
+
+Donde \( k = 0, 1, 2, 3 \) para obtener las 4 raíces cuartas. Los resultados son:
+
+\begin{enumerate}
+    \item \( \sqrt{2} + \sqrt{2}i \)
+    \item \( -\sqrt{2} + \sqrt{2}i \)
+    \item \( -\sqrt{2} - \sqrt{2}i \)
+    \item \( \sqrt{2} - \sqrt{2}i \)
+\end{enumerate}
+
+\end{document}
