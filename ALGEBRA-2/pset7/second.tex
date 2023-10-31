@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\title{Ejercicio 2 - Tarea 7}
+\date{22 de octubre de 2023}
+
+\begin{document}
+
+\maketitle
+Dado:
+\[ z_1 = 1 - i \]
+\[ z_2 = -2 + 4i \]
+\[ z_3 = \sqrt{3} - 2i \]
+
+Encuentra el valor de las siguientes expresiones:
+
+1) \[ \left| \frac{z_1 + z_2 + i}{z_1 - z_2 - 1} \right| \]
+
+Solución:
+
+Primero calculamos el numerador:
+\[ (1 - i) + (-2 + 4i) + i = -1 + 4i \]
+
+Luego, el denominador:
+\[ (1 - i) - (-2 + 4i) - 1 = 2 - 5i \]
+
+Finalmente, la expresión se reduce a:
+\[ \left| \frac{-1 + 4i}{2 - 5i} \right| \]
+
+Para simplificar el cálculo, multiplicamos y dividimos por el conjugado del denominador:
+\[ = \left| \frac{-1 + 4i}{2 - 5i} \times \frac{2 + 5i}{2 + 5i} \right| \]
+
+Esto nos da:
+\[ \left| -0.7586 + 0.1034i \right| \]
+\[ \approx 0.766 \]
+
+2) \( \text{Im}\left( \frac{z_1 z_2}{z_3} \right) \)
+
+Solución:
+
+Primero, multiplicamos \( z_1 \) y \( z_2 \):
+\[ (1 - i)(-2 + 4i) = -2 + 2i + 4i + 4 = 2 + 6i \]
+
+Luego, dividimos este resultado por \( z_3 \):
+\[ \frac{2 + 6i}{\sqrt{3} - 2i} \]
+\[ = -1.2194 + 2.0560i \]
+
+De este resultado, tomamos la parte imaginaria:
+\[ \text{Im}\left( -1.2194 + 2.0560i \right) \]
+\[ \approx 2.056 \]
+
+Por lo tanto, los valores de las expresiones son:
+
+1) \( \approx 0.766 \)
+2) \( \approx 2.056 \)
+
+\end{document}

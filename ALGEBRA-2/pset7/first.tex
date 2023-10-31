@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{datetime}
+
+\title{Ejercicio 1 - Tarea 7}
+\date{22 de octubre de 2023}
+
+\begin{document}
+
+\maketitle
+
+Sea \( z \in \mathbb{C} \setminus \{0\} \). Queremos demostrar que \( z + \frac{1}{z} \) es un número real si y sólo si \( \text{Im}(z) = 0 \) o \( |z| = 1 \).
+
+\textbf{Demostración}:
+
+(i) Suponga que \( \text{Im}(z) = 0 \). 
+
+Entonces, \( z \) es un número real y, por lo tanto, su inverso \( \frac{1}{z} \) también es real. La suma de dos números reales es real. Por lo tanto, \( z + \frac{1}{z} \) es real.
+
+(ii) Suponga que \( |z| = 1 \).
+
+Escribamos \( z \) en su forma binómica: \( z = a + bi \), donde \( a, b \in \mathbb{R} \). 
+
+Sabemos que:
+\[ |z| = \sqrt{a^2 + b^2} = 1 \]
+\[ \implies a^2 + b^2 = 1 \]
+\[ \implies a^2 = 1 - b^2 \]
+\[ \implies \frac{1}{a^2} = \frac{1}{1 - b^2} \]
+
+El conjugado de \( z \) es \( \bar{z} = a - bi \). Tenemos:
+\[ z \cdot \bar{z} = (a + bi)(a - bi) = a^2 + b^2 = 1 \]
+\[ \implies \frac{1}{z} = \frac{\bar{z}}{z \cdot \bar{z}} = \bar{z} \]
+
+Ahora, calculamos la suma:
+\[ z + \frac{1}{z} = z + \bar{z} = (a + bi) + (a - bi) = 2a \]
+
+Dado que \( 2a \) es un número real, hemos demostrado que si \( |z| = 1 \), entonces \( z + \frac{1}{z} \) es real.
+
+Recíprocamente, si \( z + \frac{1}{z} \) es real y \( \text{Im}(z) \neq 0 \), entonces \( |z| = 1 \).
+
+Por lo tanto, hemos demostrado que \( z + \frac{1}{z} \) es un número real si y sólo si \( \text{Im}(z) = 0 \) o \( |z| = 1 \).
+
+\end{document}
