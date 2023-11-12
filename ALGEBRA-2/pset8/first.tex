@@ -1,31 +1,47 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{amsmath, amssymb}
 
 \title{Ejercicio 1 - Tarea 8}
 \author{David Rivera Morales}
 \date{29 de Octubre de 2023}
 
-
 \begin{document}
 
 \maketitle
 
-Dada la expresión \( z = \cos(\theta) + i \sin(\theta) \), se tiene que \( z = e^{i \theta} \).
+\noindent \textbf{Problema:}
 
-\section*{a) Expresión para \( \frac{1}{{1 + z}} \)}
+Si \( z = \cos(\theta) + i\sin(\theta) \), expresa:
+\begin{enumerate}
+    \item \(\frac{1}{1 + z}\)
+    \item \(\frac{1}{1 - z}\)
+\end{enumerate}
+en su forma \(a + bi\).
 
-Para encontrar la expresión de \( \frac{1}{{1 + z}} \), se puede multiplicar y dividir por el conjugado del denominador:
+\vspace{1em}
 
-\[
-\frac{1}{{1 + e^{i \theta}}} \times \frac{{1 - e^{i \theta}}}{{1 - e^{i \theta}}} = 0 - \frac{\sin\left(\frac{\theta}{2}\right)}{\cos\left(\frac{\theta}{2}\right)}i
-\]
+\noindent \textbf{Solución:}
 
-\section*{b) Expresión para \( \frac{1}{{1 - z}} \)}
+\begin{enumerate}
+    \item Para \(\frac{1}{1 + z}\):
+    
+    Para encontrar el conjugado de \(1 + z\), se cambia el signo de la parte imaginaria. El conjugado es \(1 - \cos(\theta) - i\sin(\theta)\). 
+    
+    Multiplicamos el numerador y el denominador por el conjugado para eliminar la parte imaginaria del denominador:
 
-Para encontrar la expresión de \( \frac{1}{{1 - z}} \), se puede multiplicar y dividir por el conjugado del denominador:
+    \[
+    \frac{1}{1 + \cos(\theta) + i\sin(\theta)} \times \frac{1 - \cos(\theta) - i\sin(\theta)}{1 - \cos(\theta) - i\sin(\theta)} = 1 - \cos(\theta) - i\sin(\theta)
+    \]
 
-\[
-\frac{1}{{1 - e^{i \theta}}} \times \frac{{1 + e^{i \theta}}}{{1 + e^{i \theta}}} = 0 + \frac{\sin\left(\frac{\theta}{2}\right)}{\cos\left(\frac{\theta}{2}\right)}i
-\]
+    \item Para \(\frac{1}{1 - z}\):
+
+    Para encontrar el conjugado de \(1 - z\), nuevamente cambiamos el signo de la parte imaginaria. El conjugado es \(1 + \cos(\theta) + i\sin(\theta)\).
+
+    Multiplicamos el numerador y el denominador por el conjugado:
+
+    \[
+    \frac{1}{1 - \cos(\theta) - i\sin(\theta)} \times \frac{1 + \cos(\theta) + i\sin(\theta)}{1 + \cos(\theta) + i\sin(\theta)} = 1 + \cos(\theta) + i\sin(\theta)
+    \]
+\end{enumerate}
 
 \end{document}

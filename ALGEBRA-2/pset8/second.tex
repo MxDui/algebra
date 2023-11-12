@@ -21,7 +21,7 @@ La fórmula de De Moivre nos dice que si \( z = r(\cos \theta + i \sin \theta) \
 z^n = r^n (\cos(n\theta) + i \sin(n\theta))
 \]
 
-Para \(-16\), podemos representarlo en su forma polar como:
+Para representar \(-16\) en su forma polar, observamos que su magnitud es 16 y su ángulo es \(\pi\). Por lo tanto:
 
 \[
 -16 = 16(\cos \pi + i \sin \pi)
@@ -33,13 +33,39 @@ Buscamos \( z \) tal que:
 z^4 = 16(\cos \pi + i \sin \pi)
 \]
 
-Usando la fórmula de De Moivre:
+Usando la fórmula de De Moivre y teniendo en cuenta que \(z^n = r^n(\cos(n\theta) + i \sin(n\theta))\):
 
 \[
 z = 16^{\frac{1}{4}} \left( \cos\left(\frac{\pi + 2\pi k}{4}\right) + i \sin\left(\frac{\pi + 2\pi k}{4}\right) \right)
 \]
 
-Donde \( k = 0, 1, 2, 3 \) para obtener las 4 raíces cuartas. Los resultados son:
+El factor \(2\pi k\) se introduce para considerar todas las raíces \(n\)-ésimas. Para raíces cuartas, \( k = 0, 1, 2, 3 \).
+
+Vamos a calcular cada raíz:
+
+\begin{enumerate}
+    \item Para \( k = 0 \):
+    \[
+    z = 16^{\frac{1}{4}} \left( \cos\left(\frac{\pi}{4}\right) + i \sin\left(\frac{\pi}{4}\right) \right) = \sqrt{2} + \sqrt{2}i
+    \]
+    
+    \item Para \( k = 1 \):
+    \[
+    z = 16^{\frac{1}{4}} \left( \cos\left(\frac{3\pi}{4}\right) + i \sin\left(\frac{3\pi}{4}\right) \right) = -\sqrt{2} + \sqrt{2}i
+    \]
+    
+    \item Para \( k = 2 \):
+    \[
+    z = 16^{\frac{1}{4}} \left( \cos\left(\frac{5\pi}{4}\right) + i \sin\left(\frac{5\pi}{4}\right) \right) = -\sqrt{2} - \sqrt{2}i
+    \]
+    
+    \item Para \( k = 3 \):
+    \[
+    z = 16^{\frac{1}{4}} \left( \cos\left(\frac{7\pi}{4}\right) + i \sin\left(\frac{7\pi}{4}\right) \right) = \sqrt{2} - \sqrt{2}i
+    \]
+\end{enumerate}
+
+Por lo tanto, las raíces cuartas de \(-16\) son:
 
 \begin{enumerate}
     \item \( \sqrt{2} + \sqrt{2}i \)
