@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\title{Búsqueda de Coeficientes para la Divisibilidad de un Polinomio}
+\author{}
+\date{}
+\maketitle
+
+\section*{Problema}
+Se busca encontrar los coeficientes \( a, b \in \mathbb{Q} \) tales que el polinomio \( x^3 + ax^2 + bx + 5 \) sea divisible por \( x^2 + x \) en \( \mathbb{Q}[x] \).
+
+\section*{Procedimiento}
+
+Para que \( x^3 + ax^2 + bx + 5 \) sea divisible por \( x^2 + x \), las raíces de \( x^2 + x \), es decir, 0 y -1, deben ser también raíces del primer polinomio.
+
+\begin{enumerate}
+    \item \textbf{Aplicación de la Raíz \( x = 0 \):}
+    \begin{equation*}
+        0^3 + a \cdot 0^2 + b \cdot 0 + 5 = 5
+    \end{equation*}
+    Esto nos da la ecuación \( 5 = 0 \), que no es posible en \( \mathbb{Q} \).
+
+    \item \textbf{Aplicación de la Raíz \( x = -1 \):}
+    \begin{equation*}
+        (-1)^3 + a \cdot (-1)^2 + b \cdot (-1) + 5 = a - b - 1 + 5
+    \end{equation*}
+    Esto nos da la ecuación \( a - b + 4 = 0 \).
+\end{enumerate}
+
+\section*{Conclusión}
+
+No hay solución para \( a \) y \( b \) en \( \mathbb{Q} \) que haga que el polinomio \( x^3 + ax^2 + bx + 5 \) sea divisible por \( x^2 + x \), ya que la aplicación de las raíces lleva a un sistema de ecuaciones sin solución en los números racionales.
+
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\title{Cálculo Detallado del Máximo Común Divisor de Dos Polinomios}
+\author{}
+\date{}
+\maketitle
+
+Este documento describe el procedimiento para calcular el máximo común divisor (MCD) de los polinomios \( 4x^3 - 7x^2 - 11x + 5 \) y \( 4x^2 + 5 \) utilizando el algoritmo de Euclides.
+
+\section*{Procedimiento}
+
+\begin{enumerate}
+    \item \textbf{División Polinomial:} Dividimos el polinomio \( 4x^3 - 7x^2 - 11x + 5 \) entre \( 4x^2 + 5 \). Dado que el grado del dividendo es mayor que el del divisor, esperamos obtener un cociente y un resto.
+    \item \textbf{Resto:} El resto obtenido de la división anterior se convierte en el nuevo dividendo.
+    \item \textbf{Repetición:} Ahora, dividimos el divisor original \( 4x^2 + 5 \) entre el resto obtenido. Este proceso se repite, dividiendo siempre el último divisor por el último resto.
+    \item \textbf{Finalización:} Continuamos este proceso hasta que el resto sea 0. El MCD es el último divisor no nulo.
+\end{enumerate}
+
+\section*{Resultado}
+
+En nuestro caso, el cálculo del MCD revela que el máximo común divisor de \( 4x^3 - 7x^2 - 11x + 5 \) y \( 4x^2 + 5 \) es \( 1 \) desde el principio. Esto significa que no hay necesidad de realizar divisiones adicionales ya que los polinomios son coprimos.
+
+\end{document}
