@@ -1,0 +1,49 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{2. Prueba o da un contraejemplo.}
+\date{8 de Noviembre de 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Si \( G \) es euleriana, entonces \( G \) no tiene puentes.}
+\textbf{Dem:} Una gráfica es euleriano si posee un ciclo euleriano, es decir, un ciclo que recorre todas las aristas de la gráfica exactamente una vez. Si una gráfica euleriano tuviese un puente, entonces la eliminación de ese puente haría que la gráfica sea disconexa, lo que contradice la existencia de un ciclo euleriano. Por lo tanto, una gráfica euleriana no puede tener puentes.
+
+\section{Si \( G \) es euleriana, entonces \( G \) no tiene vértices de corte.}
+\textbf{Dem:}
+
+Supongamos por contradicción que \( G \) es un gráfica euleriano y tiene un vértice de corte \( v \). Un gráfica euleriano posee un ciclo euleriano, que es un ciclo que recorre todas las aristas exactamente una vez y regresa al vértice de inicio.
+
+Considere el ciclo euleriano \( C \) en \( G \). Si eliminamos el vértice de corte \( v \), el ciclo euleriano \( C \) se rompería ya que \( v \) pertenece a \( C \) y la eliminación de \( v \) desconectaría el gráfica. Esto contradice nuestra suposición inicial de que \( G \) es euleriano, ya que un ciclo euleriano no puede existir en un gráfica desconectado.
+
+Por lo tanto, la existencia de un vértice de corte \( v \) en \( G \) implicaría que \( G \) no es un gráfica euleriano, lo cual es una contradicción. En conclusión, si \( G \) es un gráfica euleriano, entonces no puede tener vértices de corte.
+
+
+\section*{Si \( G \) es euleriana, entonces \( L(G) \) es hamiltoniana.}
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{corolario}{Corolario}
+
+\begin{teorema}
+Una condición necesaria y suficiente para que la gráfica de líneas \( L(G) \) de una gráfica \( G \) sea hamiltoniana es que \( G \) sea secuencial.
+\end{teorema}
+
+\begin{proof}
+La demostración sigue al observar que los vértices de \( L(G) \) pueden ser ordenados \( v_0, v_1, \ldots, v_{p-1}, v_p = v_0 \), donde \( v_i \) y \( v_{i+1} \) son adyacentes para \( i=0, 1, \ldots, p-1 \), si y solo si \( L(G) \) es hamiltoniana, y tal ordenación es posible si y solo si las aristas de \( G \) pueden ser ordenadas \( x_0, x_1, \ldots, x_{p-1}, x_p = x_0 \), donde \( x_i \) y \( x_{i+1} \) son adyacentes para \( i=0, 1, \ldots, p-1 \). Esta última condición afirma que \( G \) es secuencial.
+\end{proof}
+
+\begin{corolario}
+Si \( G \) es una gráfica euleriana, entonces \( L(G) \) es tanto euleriana como hamiltoniana. Además, \( L^n(G) \) es tanto euleriana como hamiltoniana para todo \( n \geq 1 \).
+\end{corolario}
+
+\textbf{Dem:} Esto se debe al Teorema de Lineización de Fleischner que establece que la gráfica de líneas de una gráfica euleriana es siempre hamiltoniana. Cada arista en la gráfica euleriana corresponde a un vértice en la gráfica de líneas. Dado que la gráfica original tiene un ciclo euleriano, podemos seguir este ciclo para construir un ciclo hamiltoniano en la gráfica de líneas, visitando cada vértice (que corresponde a una arista de la gráfica original) exactamente una vez.
+
+\section{Si \( L(G) \) es hamiltoniana, entonces \( G \) es hamiltoniana.}
+\textbf{Contraejemplo:} Consideremos un gráfica estrella \( S_n \), que es un gráfica que consiste en un solo vértice central conectado a \( n \) vértices periféricos.La gráfica de líneas \( L(S_n) \) es un gráfica completa \( K_n \), que es hamiltoniano para \( n \geq 3 \). Sin embargo, la gráfica estrella original \( S_n \) no es hamiltoniano, ya que no contiene ningún ciclo que pase por todos los vértices (ya que los vértices periféricos no están conectados entre sí). Por lo tanto, la hamiltonianidad de \( L(G) \) no implica que \( G \) sea hamiltoniano.
+
+\end{document}

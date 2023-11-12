@@ -1,0 +1,30 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\title{¿Es posible que un ratón coma todo el queso?}
+\date{8 de Noviembre de 2023}
+\begin{document}
+
+\maketitle
+
+\section{Problema}
+Un ratón come un cubo de queso de 3×3×3 al ir comiendo subcubos de 1×1×1 y solo puede comer subcubos
+que comparten una cara.  ¿Es posible que coma todo el queso empezando en una esquina y terminando en el
+centro del queso? (Es importante que indiquen quién es la gráfica asociada al problema, qué interpretación
+tiene la pregunta inicial con esta gráfica y con base a lo anterior, si es posible o no realizar dicho recorrido).
+\section{Modelado con Teoría de Grafos}
+Para resolver este problema, modelamos el cubo de queso como una gráfica tridimensional $G$ donde cada subcubo de queso es representado por un vértice y cada dos subcubos adyacentes están conectados por una arista.
+
+\section{Interpretación Gráfica}
+La gráfica asociada al problema, $G$, es una gráfica cuyos vértices corresponden a los subcubos de queso y cuyas aristas representan la posibilidad de movimiento del ratón de un subcubo a otro adyacente.
+
+\section{Solución}
+Para determinar si es posible realizar el recorrido descrito, se puede aplicar una técnica de coloración a los vértices de la gráfica. Si asignamos el color negro a los subcubos en las posiciones donde tanto la suma de las coordenadas x, y, z es par, y blanco donde esta suma es impar, observamos que los subcubos negros y blancos se intercalan de manera similar a un tablero de ajedrez tridimensional.
+
+El subcubo de la esquina y el central tendrían colores distintos en esta coloración, dado que uno tendría coordenadas pares y el otro impares. Dado que hay 27 subcubos, y por ende 27 movimientos (un número impar), el ratón no puede terminar en el subcubo central después de haber comido todos los demás, ya que cada movimiento cambia el color del subcubo en el que se encuentra. 
+
+\section{Conclusión}
+Concluimos que bajo las reglas dadas, no es posible que el ratón comience comiendo el queso por una esquina y termine en el subcubo central, ya que eso requeriría un recorrido que no es posible según la coloración y la paridad de los movimientos requeridos.
+
+\end{document}
