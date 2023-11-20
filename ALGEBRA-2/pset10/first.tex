@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+
+\title{Ejercicio 1}
+\author{David Rivera Morales}
+\date{19 de Noviembre 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problema}
+Prueba que el polinomio
+\[ 50x^7 + 49x^6 + 77x^5 + 35x^4 + 35x^2 + 21x + 14 \]
+es irreducible en \( \mathbb{Z}[x] \).
+
+\section{Definición de Irreducibilidad}
+Un polinomio \( f(x) \) en \( A[x] \) se considera reducible si existen polinomios \( g(x) \) y \( h(x) \) en \( A[x] \), con grado menor al de \( f(x) \), tales que \( f(x) = g(x)h(x) \). En contraste, un polinomio es irreducible si no es reducible.
+
+\section{Aplicación del Criterio de Eisenstein}
+Para demostrar la irreducibilidad del polinomio \( P(x) \), utilizamos el Criterio de Eisenstein. Según este criterio, un polinomio es irreducible en \( \mathbb{Z}[x] \) si existe un número primo \( p \) que:
+
+\begin{enumerate}
+    \item Divide a todos los coeficientes del polinomio excepto al coeficiente líder.
+    \item Su cuadrado \( p^2 \) no divide al término constante.
+\end{enumerate}
+
+\section{Aplicación del Criterio}
+Aplicamos el Criterio de Eisenstein al polinomio \( P(x) \), eligiendo \( p = 7 \) como nuestro número primo. Observamos que:
+
+\begin{itemize}
+    \item \( 7 \) divide a 49, 77, 35, 21, y 14.
+    \item \( 7 \) no divide a 50, el coeficiente líder de \( P(x) \).
+    \item \( 49 \) (es decir, \( 7^2 \)) no divide a 14, el término constante.
+\end{itemize}
+
+\section{Conclusión}
+Dado que el polinomio \( P(x) \) satisface ambas condiciones del Criterio de Eisenstein con \( p = 7 \), concluimos que es irreducible en \( \mathbb{Z}[x] \), de acuerdo con la definición de irreducibilidad proporcionada.
+
+\end{document}

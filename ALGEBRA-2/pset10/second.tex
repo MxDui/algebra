@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Agregado para soporte de español
+\usepackage{amsmath, amssymb}
+
+\title{Ejercicio 2}
+\author{David Rivera Morales}
+\date{19 de Noviembre de 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Problema}
+Una empresa quiere emitir un bono que funciona como una anualidad para el comprador. Si el precio spot de dicho instrumento es de 100 pesos en valor nominal, y se espera que devengue un pago de 10 pesos, pagadero una vez al año en una sola exhibición. Demuestra que no existe ninguna tasa de descuento en el mercado abierto que haga viable esta operación.
+
+\section{Descripción del Problema}
+El objetivo es demostrar que no hay una tasa de descuento en el rango del 0\% al 100\% que igualaría el valor presente de estos pagos de anualidad con el precio spot del bono.
+
+\section{Desarrollo}
+El valor presente de una anualidad se calcula mediante la fórmula:
+\[ PV = PMT \times \left( \frac{1 - (1 + r)^{-n}}{r} \right) \]
+donde \( PV \) representa el valor presente, \( PMT \) es el pago por período, \( r \) es la tasa de descuento por período, y \( n \) es el número total de períodos.
+
+Para el bono en cuestión, tenemos que:
+\begin{itemize}
+    \item \( PMT = 10 \) pesos.
+    \item \( PV = 100 \) pesos.
+    \item \( r \) es la tasa de descuento, aún desconocida.
+    \item \( n \) es el número de años durante los cuales el bono realiza pagos.
+\end{itemize}
+
+Incluso sin conocer \( n \), cualquier tasa de descuento \( r \) positiva y menor que 1 hará que el valor presente de un pago de 10 pesos sea siempre inferior a 100 pesos, debido a la naturaleza del descuento. Si \( r = 0 \), el valor presente es igual al valor nominal; para cualquier \( r > 0 \), el valor presente será menor.
+
+\section{Conclusión}
+Por lo tanto, concluimos que no existe una tasa de descuento en el rango del 0\% al 100\% que haga que el valor presente de los pagos futuros de este bono sea exactamente igual a su precio spot de 100 pesos, salvo que el bono tenga una duración de un solo período. En cualquier otra situación, el valor presente siempre será menor que el precio spot.
+
+\end{document}
