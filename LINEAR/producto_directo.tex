@@ -1,0 +1,25 @@
+
+\subsection*{Definiciones}
+Recordemos que el producto cartesiano de dos conjuntos no vacíos \( V \) y \( U \) es \( V \times U = \{ (v, u) : v \in V \text{ y } u \in U \} \), donde \( (v, u) = \{ \{v\}, \{v, u\} \} \) es el doble potencia. Entonces, realmente \( V \times U = \{ (v, u) \in \mathcal{P}\mathcal{P}(V \cup U) : v \in V \text{ y } u \in U \} \).
+
+Si estos conjuntos son además \( k \)-espacios vectoriales (sobre el mismo campo \( k \)), entonces este producto cartesiano es también un \( k \)-espacio vectorial y se le llamará Producto Directo.
+
+\subsection*{Definición-Lema}
+Sean \( (V, +_V, \cdot_V) \) y \( (U, +_U, \cdot_U) \) dos \( k \)-espacios vectoriales.
+\begin{enumerate}
+    \item[1.1.] \( V \times U = \{ (v, u) : v \in V \text{ y } u \in U \} \) es un \( k \)-espacio vectorial con las siguientes operaciones: \( \forall (v, u), (v', u') \in V \times U, \forall \alpha \in k \)
+    \begin{itemize}
+        \item \( (v, u) + (v', u') := (v +_V v', u +_U u') \)
+        \item \( \alpha \cdot (v, u) := (\alpha \cdot_V v, \alpha \cdot_U u) \).
+    \end{itemize}
+    \item[1.2.] Si además, \( V \) y \( U \) son \( k \)-espacios vectoriales finitamente generados, digamos \( n = \text{dim } V \) y \( m = \text{dim } U \). Entonces \( V \times U \) es finitamente generado con \( \text{dim } V \times U = n + m \).
+    De hecho, si \( B_V = \{ v_1, \ldots, v_n \} \) es base de \( V \) y \( B_U = \{ u_1, \ldots, u_m \} \) es base de \( U \), entonces
+    \[
+    \{ (v_1, 0_U), \ldots, (v_n, 0_U) \} \cup \{ (0_V, u_1), \ldots, (0_V, u_m) \}
+    \]
+    es base de \( V \times U \).
+\end{enumerate}
+
+\subsection*{Ejemplos}
+
+\subsection*{Problemas}
