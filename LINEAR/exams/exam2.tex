@@ -1,0 +1,87 @@
+\subsection*{Examen Parcial 2.A}
+\textbf{NOMBRE:}
+
+\begin{enumerate}
+    \item Sean $V$ un espacio vectorial y $X \subseteq V$:
+    \begin{enumerate}
+        \item Dar la definición de cuándo $X$ es linealmente independiente en $V$.
+        
+        \todo{Aquí se presentan dos definiciones equivalentes de independencia lineal.}
+        Dar alguna de las siguientes:
+        \begin{itemize}
+            \todo{Esta definición utiliza la idea de que ningún vector en el conjunto es una combinación lineal de los demás.}
+            \item $X$ es un conjunto linealmente independiente $\iff \forall v \in X, v \notin \langle X \setminus \{v\}\rangle$
+            \todo{Esta definición establece que una suma de vectores ponderada igual a cero implica que todos los coeficientes deben ser cero.}
+            \item $\forall m \geq 1, \forall \alpha_1, \ldots, \alpha_m \in \mathbb{k}, \forall v_1, \ldots, v_m \in X,$
+            $$\left[\sum_{j=1}^m \alpha_j v_j = 0\right] \implies [\forall j = 1, \ldots, m, \alpha_j = 0]$$
+        \end{itemize}
+        \item ¿Qué significa que $X$ no genere a $V$: Es decir, que $\langle X\rangle \neq V$?
+        
+        \todo{Aquí se explica qué significa que el conjunto X no genere todo el espacio V.}
+        Recordemos que $$\langle X\rangle = V \iff \forall v \in V, \exists m \geq 1, \exists \alpha_1, \ldots, \alpha_m \in \mathbb{k}, \exists v_1, \ldots, v_m \in X, v = \sum_{j=1}^m \alpha_j v_j$$
+        
+        \todo{La condición de que X no genera V se traduce en que existe al menos un vector en V que no puede ser expresado como una combinación lineal de vectores en X.}
+        Por lo tanto, $$\langle X\rangle \neq V \iff \exists v \in V, \forall m \geq 1, \forall \alpha_1, \ldots, \alpha_m \in \mathbb{k}, \forall v_1, \ldots, v_m \in X, v \neq \sum_{j=1}^m \alpha_j v_j$$
+        
+        \todo{Se da un criterio simplificado para la no generación, pero se advierte que vale medio punto.}
+        \textbf{SI SÓLO PONEN $\exists v \in V, v \notin \langle X\rangle$ ES MEDIO PUNTO.}
+    \end{enumerate}
+    
+    \item Tomemos el siguiente espacio vectorial, $$V = \{(x, y) \in \mathbb{R}^2 : 3x - 5y = 0\}$$ \todo{No es necesario demostrar que es un espacio vectorial.}
+    
+    \todo{Se define el conjunto X.}
+    Tomemos $X = \{(5, 3), (1, \frac{3}{5})\}$
+    
+   
+    \begin{enumerate}
+        \item \textbf{P.D.} $\{(5, 3), (1, \frac{3}{5})\} = V$: \todo{Se pide demostrar que X genera V.}
+        
+        \todo{Inicio de la demostración.}
+        \textbf{Demostración.}
+        P.D. $\forall (x, y) \in V, \exists m \geq 1, \exists \alpha, \beta \in \mathbb{R}, (x, y) = \alpha(5, 3) + \beta(1, \frac{3}{5})$.
+        
+        \todo{Se toma un vector arbitrario de V.}
+        Sea $(x, y) \in V$:
+        \todo{Se explica la estrategia para demostrar que todo vector de V puede expresarse como una combinación lineal de vectores en X.}
+        P.D. $\exists m \geq 1, \exists \alpha, \beta \in \mathbb{R}, (x, y) = \alpha(5, 3) + \beta(1, \frac{3}{5})$.
+        
+        \todo{Se utiliza la condición del espacio V para simplificar la expresión de un vector genérico de V.}
+        Como $(x, y) \in V \implies 3x - 5y = 0 \implies 3x = 5y \implies y = \frac{3x}{5} \implies (x, y) = (x, \frac{3x}{5}) = x(1, \frac{3}{5}) \in \{(5, 3), (1, \frac{3}{5})\}$.
+        
+        \todo{Se concluye que X genera V.}
+        Por lo tanto, $\forall (x, y) \in V, \exists m \geq 1, \exists \alpha, \beta \in \mathbb{R}, (x, y) = \alpha(5, 3) + \beta(1, \frac{3}{5})$.
+        
+        \todo{Se afirma que X y V son iguales en términos de generación.}
+        Por lo tanto, $\{(5, 3), (1, \frac{3}{5})\} = V$.
+        
+        \item ¿$X$ es base de $V$? \todo{Se cuestiona si X es base de V.}
+        \todo{Se explica por qué X no es linealmente independiente.}
+        NO, pues no es linealmente independiente: $(5, 3) = 5(1, \frac{3}{5}) \in \{(5, 3), (1, \frac{3}{5})\} \setminus \{(5, 3)\} = \{(1, \frac{3}{5})\}$.
+        
+        \todo{Se solicita encontrar una base de V contenida en X.}
+        Sino, encontrar una base de $V$ contenida en $X$ (Con demostración).
+        
+        \begin{enumerate}
+            \todo{Se demuestra que {(5, 3)} es una base de V.}
+            \item $\{(5, 3)\}$ es base de $V$, pues un vector distinto del $(0, 0)$ es linealmente independiente.
+            
+            \todo{Se ofrecen varias demostraciones alternativas.}
+            OTRA DEM: $(5, 3) \notin \langle\{(5, 3)\} \setminus \{(5, 3)\}\rangle = \langle\emptyset\rangle = \{0\}$
+            
+            OTRA DEM: P.D. $\forall \alpha \in \mathbb{R}, [\alpha(5, 3) = (0, 0)] \implies [\alpha = 0]$
+            
+            \todo{Se toma un coeficiente arbitrario y se demuestra que debe ser cero.}
+            Sea $\alpha \in \mathbb{R}$ tal que $\alpha(5, 3) = (0, 0)$
+            P.D. $\alpha = 0$
+            
+            \todo{Se concluye la demostración.}
+            Como $\alpha(5, 3) = (0, 0) \implies (5\alpha, 3\alpha) = (0, 0) \implies 5\alpha = 0$ y $3\alpha = 0 \implies \frac{5\alpha}{3} = 0$.
+            
+            \todo{Se afirma que {(5, 3)} es una base de V.}
+            Por lo tanto, $\{(5, 3)\}$ es linealmente independiente y como genera a $V$. Entonces es base de $V$.
+            
+            \todo{Se ofrece una demostración alternativa para otro conjunto.}
+            \item $\{(1, \frac{3}{5})\}$ es base de $V$, pues un vector distinto del $(0, 0)$ es linealmente independiente. ETC.
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
