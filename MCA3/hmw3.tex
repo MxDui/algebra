@@ -16,6 +16,22 @@
 \subsection*{Pregunta 1}
 \begin{enumerate}
     \item Hallar la longitud total del alambre representado por la curva \( C = C1 \cup C2 \), donde \( C1 \) es parte de la parábola \( y = x^2 \) y \( C2 \) es un segmento de recta.
+    \item La longitud total del alambre para \( C_1 \) es:
+    \[
+    L_{C_1} = \int_{0}^{1} \sqrt{1 + (2t)^2} \, dt = \frac{\text{asinh}(2)}{4} + \frac{\sqrt{5}}{2}
+    \]
+    Y para \( C_2 \) es \( 1 \). Por lo tanto, la longitud total es \( L_{C_1} + 1 \).
+    
+    \item La masa total del alambre para \( C_1 \) es:
+    \[
+    m_{C_1} = \int_{0}^{1} (t + \sqrt{t^2}) \sqrt{1 + (2t)^2} \, dt = \frac{5\sqrt{5}}{6} - \frac{1}{6}
+    \]
+    Y para \( C_2 \) es \( 1 \). Entonces, la masa total es \( m_{C_1} + 1 \).
+    
+    \item La densidad promedio del alambre se calculará como la masa total dividida por la longitud total. Añadiremos este cálculo a continuación:
+    \[
+    \rho_{\text{promedio}} = \frac{m_{C_1} + 1}{L_{C_1} + 1} = \frac{\frac{5\sqrt{5}}{6} - \frac{1}{6} + 1}{\frac{\text{asinh}(2)}{4} + \frac{\sqrt{5}}{2} + 1}
+    \]
     \item Si la densidad en cada punto del alambre está dada por la función \( \rho(x, y, z) = x + \sqrt{y} - z^2 \), hallar la masa total del alambre.
     \item Hallar la densidad promedio del alambre.
 \end{enumerate}
