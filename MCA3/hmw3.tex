@@ -18,21 +18,87 @@
 \begin{itemize}
     \item \textbf{Hallar la longitud total del alambre representado por la curva \( C = C1 \cup C2 \), donde \( C1 \) es parte de la parábola \( y = x^2 \) y \( C2 \) es un segmento de recta.}
     \begin{itemize}
-        \item \textbf{Caso C1:} La parametrización es...
-        \item \textbf{Caso C2:} La parametrización es \( r(t) = t\mathbf{i} + t\mathbf{j} \) con \( t \in [c, d] \).
+        \item \textbf{Caso C1:} La parametrización es \( t = x \to y = t^2 \), entonces los puntos \((1, 1, 0)\) serán \( (t, t^2, 0) \). Derivando tenemos que \(\frac{dx}{dt} = x' = 1 \), \(\frac{dy}{dt} = y' = 2t \) y \(\frac{dz}{dt} = z' = 0 \). Con las derivadas anteriores y sabiendo que va de 0 a 1 podemos plantear:
+        \[
+        \int_{0}^{1} \sqrt{x'^{2} + y'^{2} + z'^{2}} \, dt = \int_{0}^{1} \sqrt{1 + 4t^{2}} \, dt
+        \]
+        \[
+        = \frac{2t (1 + 4t^{2})^{\frac{1}{2}}}{4} + \frac{\ln \left(2t + \sqrt{1 + 4t^{2}}\right)}{4} \Big|_{0}^{1} 
+        \]
+        \[
+        = \frac{2(1 + 4)^{\frac{1}{2}}}{4} + \frac{\ln \left(2 + \sqrt{1 + 4}\right)}{4} = 1.478 = C1
+        \]
+        
+        \item \textbf{Caso C2:} Planteamos a \( z \) como \( t \) y la parametrización será \( (1,1,t) \).
+        \[
+        \text{Derivadas} \quad \frac{dx}{dt} = 0, \quad \frac{dy}{dt} = 0, \quad \frac{dz}{dt} = 1
+        \]
+        \[
+        \text{La integral que va de 0 a 1 es} \quad \int_{0}^{1} \sqrt{0 + 0 + 1} \, dt = 1
+        \]
+
+        \item \textbf{Sumando las longitudes de C1 y C2:} \quad \( 1.478 + 1 = 2.478 \)
+
+        \item \textbf{Por lo tanto, la longitud total del alambre es de 2.478.}
     \end{itemize}
 
     \item \textbf{Si la densidad en cada punto del alambre está dada por la función \( \rho(x, y, z) = x + \sqrt{y} - z^2 \), hallar la masa total del alambre.}
+     \begin{itemize}
+        \item La masa total del alambre, calculada como la suma de las masas de \( C1 \) y \( C2 \), es \( 3.364 \). En la siguiente pregunta se encuentran los cálculos.
+    \end{itemize}
     
     \item \textbf{Hallar la densidad promedio del alambre.}
     \begin{itemize}
         \item La fórmula del valor promedio es \( \frac{\int_{C} \rho(x, y, z) \, ds}{\int_{C} ds} \).
         \item Sabiendo que la longitud del arco calculada es \( \int_{C} ds = 2.478 \), se calcula \( \frac{\int_{C} \rho(x, y, z) \, ds}{2.478} \).
-        \item Haciendo el cambio de variables \( dx = dt \), \( dy = y \, dt \), \( dz = 2t \, dt \), entonces \( ds = \sqrt{(dx)^2 + (dy)^2 + (dz)^2} = \sqrt{(1)^2 + (y)^2 + (2t)^2} \, dt \).
-        \item La función densidad parametrizada será:
-        \[ \rho(t, y(t), z(t)) = t + \sqrt{t} - 4t^2 \]
-        \item La integral requerida es:
-        \[ \int_{0}^{1} \left( t + \sqrt{t} - 4t^2 \right) \sqrt{1 + t + 4t^2} \, dt \]
+        \item Entonces para C1 y C2 parametrizamos
+        \[
+            C1 \to t=x , \frac{dx}{dt} = x' = 1, \frac{dy}{dt} = y' = 2t, \frac{dz}{dt} = 0
+            \]
+            \item La función ahora parametrizada será:
+            \[
+                P(x,y,z)= x + sqrt{y} -z^{2}
+                \]
+                \[
+                    P(t,t^{2},0) = t + \sqrt{t^{2}} - 0 = t + t - 0 = 2t
+                    \]
+                    \[
+                        \int_{0}^{1} 2t \sqrt{1 + 4t^{2}} \, dt , u = 1 + 4t^{2}, du = 8t \, dt
+                        \]
+                        \[
+                            \int_{0}^{1} \frac{1}{4} u^{\frac{1}{2}} \, du = \frac{1}{4} \int_{0}^{1} u^{\frac{1}{2}} du = \frac{1}{6} u^{\frac{3}{2}} \Big|_{0}^{1}
+                            \]
+                            \[
+                                 = \frac{1}{6} (1+4 t^{2})^{\frac{3}{2}} \Big|_{0}^{1} = \frac{(1+4t^{2})\sqrt{1+4t^{2}}}{6} \Big|_{0}^{1} = \frac{5\sqrt{5}}{6} - \frac{1}{6} =  1.697 = C1
+                                 \]
+        \[
+            C2 \to \frac{dx}{dt} = 0, \frac{dy}{dt} = 0, \frac{dz}{dt} = 1 .
+            \]
+            \item  Sustituimos en la función P(x,y,z) y  en la parametrización de C2:
+            \[
+                P(x,y,z) = x + \sqrt{y} - z^{2} 
+                \]
+                \[
+                    P(1,1,t) = 2 - t^{2}
+                    \]
+                    \item Planteamos la integral de 0 a 1:
+                    \[
+                        \int_{0}^{1} 2 - t^{2} \, dt = 2t - \frac{t^{3}}{3} \Big|_{0}^{1} = 2 - \frac{1}{3} = \frac{5}{3} = C2
+                        \]
+                        \item Sumando C1 y C2:
+                        \[
+                            1.697 + \frac{5}{3} = 3.364
+                            \]
+                            \item Por lo tanto, la masa total del alambre es de 3.364.
+                            \item Para hallar la densidad promedio se divide la masa total entre la longitud total del alambre:
+                            \[
+                                \frac{3.364}{2.478} = 1.358
+                                \]
+                                \item Por lo tanto, la densidad promedio del alambre es de 1.357.
+
+
+                      
+                
     \end{itemize}
 \end{itemize}
 
@@ -48,6 +114,10 @@
         \item \to\[ \int_{0}^{2\pi} \left( \cos^2 t -  \sin^2 t + 40\right) \, dt \]
         \item \to\[ (\frac{\cos t \sin t}{2} - \frac{\sin t \cos t}{2} + 40t) \Big|_{0}^{2\pi} \]
         \item \to\[ 80\pi \]
+        \item \to \[ \frac{80\pi m^2}{100 m^2/L} \]
+        \item \to \[ \frac{4}{5} \pi L \] Para un lado de la valla.
+        \item \to \[ \frac{8}{5} \pi L \] Para ambos lados de la valla.
+
         
         
     \end{itemize}
@@ -60,7 +130,24 @@
         \item Por lo tanto, la altura promedio de la valla es de 4 metros.
     
     \end{itemize}
-\subsection*{Pregunta 3}
+
+    \item \textbf{¿Cuál es la longitud de la valla entre los puntos (5\sqrt{3},5) y (5\sqrt{2},5\sqrt{2})?}
+    \begin{itemize}
+        \item Recordemos que \(z(x, y) = 0.01(x^2 - y^2) + 4\), entonces parametrizando 
+        \[ r(t) = (1-t)(5\sqrt{3},5) + t(5\sqrt{2},5\sqrt{2}) \]
+        \[ = (5\sqrt{3} - 5\sqrt{3}t, 5 - 5t) + (5\sqrt{2}t, 5\sqrt{2}t) \]
+        \[ = 5 (\sqrt{3} - \sqrt{3}t + \sqrt{2}t), 5(1 + \sqrt{2}t - t) \]
+        \item Planteamos la siguiente integral:
+        \[ \int_{0}^{1} \frac{(5\sqrt{3} - 5\sqrt{3}t + 5\sqrt{2}t + 5 + 5\sqrt{2}t - 5t)}{\sqrt{(5\sqrt{2} - 5\sqrt{3})^2 + (5\sqrt{2} - 5)^2 }} \, dt \]
+        \[ = \int_{0}^{1} \sqrt{(5\sqrt{2} - 5\sqrt{3})^2 + (5\sqrt{2} - 5)^2 } \, dt \]
+        \[ = \int_{0}^{1} \sqrt{2.525 + 4.289} \, dt \]
+        \[ = \int_{0}^{1} \sqrt{2.6103} \, dt \]
+        \item Por lo tanto la longitud de la valla entre los puntos (5\sqrt{3},5) y (5\sqrt{2},5\sqrt{2})
+        \item es de 2.6103.
+    \end{itemize}
+
+    
+    \subsection*{Pregunta 3}
 Evaluar las integrales que se indican:
 \begin{enumerate}
     \item \( \int_{C} F(x,y) \, dr \) donde \( F(x,y) = \left(\frac{1}{x^2 + 1}\right) \) sobre \( r(t) = t\mathbf{i} + t^2\mathbf{j} + t^4\mathbf{k} \) con \( t \in [0,1] \).
