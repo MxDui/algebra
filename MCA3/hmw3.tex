@@ -150,13 +150,117 @@
     \subsection*{Pregunta 3}
 Evaluar las integrales que se indican:
 \begin{enumerate}
-    \item \( \int_{C} F(x,y) \, dr \) donde \( F(x,y) = \left(\frac{1}{x^2 + 1}\right) \) sobre \( r(t) = t\mathbf{i} + t^2\mathbf{j} + t^4\mathbf{k} \) con \( t \in [0,1] \).
-    \item \( \int_{C} g(x,y) \, dx \) donde \( g(x, y) = x^2 - y \) sobre la curva \( C: x^2 + y^2 = 4 \) de \( (0, 2) \) a \( (\sqrt{2}, \sqrt{2}) \).
-    \item \( \int_{C} F \cdot dr \) donde \( F(x, y, z) = z\mathbf{i} + x\mathbf{j} + y\mathbf{k} \) y \( C \) es la curva \( r(t) = \sin t \mathbf{i} + \cos t \mathbf{j} + t \mathbf{k} \) con \( t \in [0, 2\pi] \).
-    \item \( \int_{C} f(x, y) \, dx \) donde \( f(x, y) = \frac{x^3}{y} \) sobre la curva \( C: y = \frac{x^2}{2} \) con \( 0 \leq x \leq 2 \).
-    \item \( \int_{C} xy \, dx + (x + y) \, dy \) sobre \( y = x^2 \) de \( (-1, 1) \) a \( (2, 4) \).
-    \item \( \int_{C} (x + y + z) \, ds \) sobre el segmento de recta que va de \( (1, 2, 3) \) a \( (0, -1, 1) \).
-    \item \( \int_{C} (\sin z \, dx + \cos z \, dy + (xy)^{1/3} \, dz) \) con \( C: r(t) = \cos^3 t \mathbf{i} + \sin^3 t \mathbf{j} + t \mathbf{k} \) con \( t \in [0, \frac{7\pi}{2}] \).
-    \item \( \int_{R} (2xy + \sqrt{z}) \) a lo largo de la curva \( R(t) = \cos t \mathbf{i} + \sin t \mathbf{j} + t \mathbf{k} \), con \( 0 \leq t \leq \pi \).
+\item $\int_{C} F(x,y) , dr$ donde $F(x,y) = \left(\frac{1}{x^2 + 1}\right)$ sobre $r(t) = t\mathbf{i} + t^2\mathbf{j} + t^4\mathbf{k}$ con $t \in [0,1]$.
+\begin{enumerate}
+\item Calculamos las derivadas:
+[
+\frac{dx}{dt} = 1, \quad \frac{dy}{dt} = 2t, \quad \frac{dz}{dt} = 4t^{3}
+]
+\item Sabemos que $F(x,y) = \frac{1}{t^{2}+1}$.
+\item Planteamos la integral:
+[
+\int_{0}^{1} \frac{1}{t^{2}+1} \sqrt{1^{2}\i+ 4t^{2}\j + 16t^{6}\k} , dt
+]
+[
+\int_{0}^{1} \frac{1}{t^{2}+1} \sqrt{4t^{2}} , dt =  \int_{0}^{1} \frac{2t}{t^{2}+1} , dt
+]
+\item Hacemos cambio de variable $u = t^{2} + 1, , du = 2t , dt$:
+[
+\int_{0}^{1} \frac{du}{u} = \ln u \Big|_{0}^{1} = \ln(1+1) = \ln(2) = 0.693
+]
+\item Por lo tanto, la integral es 0.693.
+\end{enumerate}
+
+\item $\int_{C} g(x,y) , dx$ donde $g(x, y) = x^2 - y$ sobre la curva $C: x^2 + y^2 = 4$ de $(0, 2)$ a $(\sqrt{2}, \sqrt{2})$.
+\begin{enumerate}
+\item Parametrizamos la curva:
+[
+x = 2 \cos t, \quad y = 2 \sin t
+]
+con $t$ variando de $\frac{\pi}{2}$ a $\frac{\pi}{4}$.
+\item Calculamos la derivada de $x$ respecto a $t$:
+[
+\frac{dx}{dt} = -2 \sin t
+]
+\item Escribimos la integral de línea:
+[
+\int_{\frac{\pi}{2}}^{\frac{\pi}{4}} \left((2\cos t)^2 - 2\sin t\right) (-2\sin t) , dt
+]
+\item Simplificando, obtenemos:
+[
+\int_{\frac{\pi}{2}}^{\frac{\pi}{4}} 4\sin t , dt
+]
+\item Invirtiendo los límites de integración:
+[
+-\int_{\frac{\pi}{4}}^{\frac{\pi}{2}} 4\sin t , dt = -4 \left[-\cos t \right]_{\frac{\pi}{4}}^{\frac{\pi}{2}} = -2\sqrt{2}
+]
+\item Por lo tanto, la integral de línea es $-2\sqrt{2}$.
+\end{enumerate}
+
+\item $\int_{C} \mathbf{F} \cdot d\mathbf{r}$ donde $\mathbf{F}(x, y, z) = z\mathbf{i} + x\mathbf{j} + y\mathbf{k}$ y $C$ es la curva $\mathbf{r}(t) = \sin t \mathbf{i} + \cos t \mathbf{j} + t \mathbf{k}$ con $t \in [0, 2\pi]$.
+\begin{enumerate}
+\item Calculamos la parametrización y la derivada de la curva:
+[
+\mathbf{r}(t) = \sin t \mathbf{i} + \cos t \mathbf{j} + t \mathbf{k}, \quad \mathbf{r}'(t) = \cos t \mathbf{i} - \sin t \mathbf{j} + \mathbf{k}
+]
+\item Evaluamos el campo vectorial sobre la curva:
+[
+\mathbf{F}(\mathbf{r}(t)) = t \mathbf{i} + \sin t \mathbf{j} + \cos t \mathbf{k}
+]
+\item Calculamos el producto punto $\mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$:
+[
+\mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) = t \cos t - \sin^2 t + \cos t
+]
+\item Integramos a lo largo de la curva:
+[
+\int_{0}^{2\pi} (t \cos t - \sin^2 t + \cos t) , dt = -\pi + \pi + 0 = 0
+]
+\item Por lo tanto, la integral de línea es 0.
+\end{enumerate}
+
+\item $\int_{C} f(x, y) , dx$ donde $f(x, y) = \frac{x^3}{y}$ sobre la curva $C: y = \frac{x^2}{2}$ con $0 \leq x \leq 2$.
+\begin{align*}
+\int_{C} f(x, y) , dx &= \int_{0}^{2} \frac{x^3}{\frac{x^2}{2}} , dx \
+&= 2 \int_{0}^{2} x^2 , dx \
+&= 2 \cdot \frac{2^3}{3} \
+&= \frac{16}{3}
+\end{align*}
+
+\item $\int_{C} xy , dx + (x + y) , dy$ sobre $y = x^2$ de $(-1, 1)$ a $(2, 4)$.
+\begin{align*}
+\int_{C} xy , dx + (x + y) , dy &= \int_{-1}^{2} x \cdot x^2 , dx + \int_{1}^{4} (x + x^2) , dy \
+&= \int_{-1}^{2} x^3 , dx + \int_{1}^{4} (x + x^2) , dy \
+&= \left[ \frac{x^4}{4} \right]{-1}^{2} + \left[ x^2 + \frac{x^3}{3} \right]{1}^{4} \
+&= \left( \frac{2^4}{4} - \frac{(-1)^4}{4} \right) + \left( 4^2 + \frac{4^3}{3} - 1^2 - \frac{1^3}{3} \right) \
+&= 8 - \frac{1}{4} + 16 + \frac{64}{3} - 1 - \frac{1}{3} \
+&= 22 + \frac{53}{12}
+\end{align*}
+
+\item $\int_{C} (x + y + z) , ds$ sobre el segmento de recta que va de $(1, 2, 3)$ a $(0, -1, 1)$.
+\begin{align*}
+\int_{C} (x + y + z) , ds &= \int_{0}^{1} (1 - t + 2 - t + 3 - t) \sqrt{1^2 + (-1-2)^2 + (1-3)^2} , dt \
+&= \int_{0}^{1} 6 - 3t \sqrt{6} , dt \
+&= 6\sqrt{6} - \frac{3\sqrt{6}}{2} \
+&= \frac{27\sqrt{6}}{2}
+\end{align*}
+
+\item $\int_{C} (\sin z , dx + \cos z , dy + (xy)^{1/3} , dz)$ con $C: r(t) = \cos^3 t \mathbf{i} + \sin^3 t \mathbf{j} + t \mathbf{k}$ con $t \in [0, \frac{7\pi}{2}]$.
+\begin{align*}
+\int_{C} (\sin z , dx + \cos z , dy + (xy)^{1/3} , dz) &= \int_{0}^{7\pi/2} (\sin t \cdot (-3\sin^2 t \cos t) + \cos t \cdot 3\sin^2 t \cos t + (t)^{1/3}) , dt \
+&= \int_{0}^{7\pi/2} (-3\sin^3 t \cos t + 3\sin^2 t \cos^2 t + t^{1/3}) , dt \
+&= -3 \int_{0}^{7\pi/2} \frac{1}{4} \sin 4t , dt + 3 \int_{0}^{7\pi/2} \frac{1}{2} \cos 2t , dt + \frac{7\pi}{2} \cdot \frac{7\pi}{6} \
+&= -\frac{3}{4} + \frac{3}{2} + \frac{49\pi^2}{24} \
+&= \frac{49\pi^2}{24} - \frac{1}{4}
+\end{align*}
+
+\item $\int_{R} (2xy + \sqrt{z})$ a lo largo de la curva $R(t) = \cos t \mathbf{i} + \sin t \mathbf{j} + t \mathbf{k}$, con $0 \leq t \leq \pi$.
+\begin{align*}
+\int_{R} (2xy + \sqrt{z}) &= \int_{0}^{\pi} (2(\cos t)(\sin t)(t) + \sqrt{t}) , dt \
+&= 2 \int_{0}^{\pi} t \sin 2t , dt + \int_{0}^{\pi} \sqrt{t} , dt \
+&= 2 \left[ -\frac{t^2}{4} \cos 2t \right]{0}^{\pi} + \left[ \frac{2}{3}t^{3/2} \right]{0}^{\pi} \
+&= 2 \left( -\frac{\pi^2}{4} - 0 \right) + \frac{2}{3} \left( \pi^{3/2} - 0 \right) \
+&= -\frac{\pi^2}{2} + \frac{2}{3}\pi^{3/2}
+\end{align*}
 \end{enumerate}
 \end{document}
+
