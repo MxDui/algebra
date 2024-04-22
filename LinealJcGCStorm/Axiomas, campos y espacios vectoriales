@@ -1,0 +1,322 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{introducciuxf3n.}{%
+\subsection{Introducción.}\label{introducciuxf3n.}}
+
+El algebra lineal es geometria en donde las lineas con las que dibujamos
+tienen dos operaciones algebraicas \emph{(suma y producto)}. Estas
+lineas junto co sus operaciones cumplen varias propiedades y son los
+llamados campos o cuerpos y los espacios geométricos que podemos dibujar
+con estas lineas se llaman espacios vectoriales, pueden ser finitos o
+infinitos. \#\#\# Axiomas de Zermelo-Fraenkel + Axiomas de Elección.
+
+\hypertarget{axioma-1.-de-existencia-o-del-conjunto-vacuxedo.}{%
+\paragraph{\#Axioma 1. De existencia o del conjunto
+vacío.}\label{axioma-1.-de-existencia-o-del-conjunto-vacuxedo.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma 1. De existencia o del Conjunto Vacío: Existe un
+conjunto que no tiene elementos. Es decir,
+\(\exists a, [\forall X, ¬(X \in A)] \equiv \exists A, \forall X(X \notin A)\)
+\end{quote}
+
+\begin{quote}
+{[}! Warning{]}- Lema del conjunto vacío. Existe un único conjunto sin
+elementos. Por ser único lo llamaremos el \emph{Conjunto Vacio} y lo
+denotaremos por \(\emptyset\)
+\end{quote}
+
+\hypertarget{axioma-2.-de-extensionalidad.}{%
+\paragraph{\#Axioma 2. De
+extensionalidad.}\label{axioma-2.-de-extensionalidad.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma 2. De extensionalidad: Sean \(X\) y \(Y\)
+conjuntos, \(X = Y\) se lee \(X\) es igual a \(Y\)
+\(\forall X [\forall Y ([X = Y]) \iff [\forall Z [(Z \in X) \iff (Z \in Y)]])]\)
+En cristiano este axioma nos dice que dos conjuntos \(X\) y \(Y\) son
+iguales exactamente cuándo tienen los mismos elementos. \#\#\#\#
+\#Axioma 3. Esquema de Comprensión o de Especificación. {[}! Danger{]}
+Axioma 3. Esquema de Comprensión o de Especificación: Sea \(P(x)\) una
+proposición en \(x\). Entonces para todo conjunto \(A\) la colección de
+los elementos de \(A\) que cumplen \(P(x)\) (ie., tales que \(P(x)\) es
+verdad) es un conjunto.
+\(\forall A [\exists S, (\forall X [(X \in S) \iff ((X \in A) \land P(X))])]\)
+Nota: Para A conjunto y para cada proposición en x, \(P(x)\), es
+conjunto \(S\) es único, por lo que lo denotaremos como
+\({x \in A; P(x)}\) \#\#\#\# \#Axioma 4. Del par. {[}! Danger{]} Axioma
+4. Del Par: Para cada \(X\) y \(Y\) conjuntos, existe un conjunto cuyos
+únicos elementos son \(X\) y \(Y\)
+\(\forall X \forall Y, \exists B, \forall Z((Z \in B) \iff ([Z =X] \lor [Z = Y]))\)
+Este conjunto \(B\) es único lo denotaremos por \({X, Y}\) \#\#\#\#
+\#Axioma 5. De la union. {[}! Danger{]} Axioma 5. De la unión:
+\(\forall S \exists U, \forall X [(X \in U) \iff (\exists A, [(A \in S) \land (X \in A)])]\)
+\end{quote}
+
+\begin{quote}
+{[}! Example{]}- Ejemplo: Sea
+\(S= {A_1 = (0,1), A_2 = (0,2), A_3 = (3,4,5)}\). Entonces
+\(\cup S = (0,1,2,3,4,5)\)
+\end{quote}
+
+\hypertarget{axioma-6.-del-conjunto-potencia.}{%
+\paragraph{\#Axioma 6. Del conjunto
+potencia.}\label{axioma-6.-del-conjunto-potencia.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma 6. Del Conjunto Potencia:
+\(\forall X (\exists S, [\forall A((A \in S) \iff (A \subseteq X))])\)
+Nos dice que para cada conjunto X existe un conjunto \(P(x)\) que
+contiene todos los subconjuntos de X. Es decir si un conjunto Y es un
+subconjunto de X, entonces Y también es un elemento de \(P(X)\). En
+resumen, para cualquier conjunto podemos construir otro conjunto que
+contiene todos los posibles subconjuntos del conjunto original.
+\end{quote}
+
+\#Que\_Insano
+
+\hypertarget{axioma-7.-de-regularidad-o-de-fundaciuxf3n.}{%
+\paragraph{\#Axioma 7. De regularidad o de
+Fundación.}\label{axioma-7.-de-regularidad-o-de-fundaciuxf3n.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma 7. De regularidad o de Fundación.
+\(\forall A [(A ≠ \emptyset) \Rightarrow [\exists u, [(u \in A) \land (\forall x (x \in A) \Rightarrow (x \notin u))]]]\)
+Nos está diciendo que todo conjunto no vacio A contiene al menos un
+elemento x que es disjunto \emph{(no tiene intersección)} de A, es decir
+un conjunto no puede ser miembro de sí mismo, ningún conjunto puede ser
+elemento de si mismo directa o indirectamente, asegurandonos que no hay
+conjuntos infinitamente descendentes. Por lo que yo entiendo, nos están
+dando un limite inferior que sería el vacío.
+\end{quote}
+
+\begin{quote}
+{[}! Important{]} Teorema. a)
+\(\forall A [(A ≠ \emptyset) \Rightarrow (A \notin A)]\) b) La colección
+de todos los conjuntos \emph{NO} forma un conjunto.
+\end{quote}
+
+\hypertarget{axioma-8.-de-infinitud.}{%
+\paragraph{\#Axioma 8. De infinitud.}\label{axioma-8.-de-infinitud.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma 8. De infinitud:
+\(\exists X, [(\emptyset \in X) \land [\forall Y ((Y \in X) \Rightarrow (Y \cup\)
+\{\(Y\)\} \(\in X))]]\) Es decir, existe un conjunto X tal que -
+\(\emptyset \in X\) y - \(\emptyset\) \(\cup\) \{\(\emptyset\)\} =
+\{\(\emptyset\)\} \(\in X\) y - \{\(\emptyset\)\} \(\cup\)
+\{\{\(\emptyset\)\}\} = \{\(\emptyset\), \{\(\emptyset\)\}\} \(\in X\) y
+\ldots{} Se explica solito, podemos hacer conjuntos infinitos con el
+conjunto vacío, es meter conjuntos sobre conjuntos sobre conjuntos
+sobre\ldots.
+\end{quote}
+
+\#Que\_Insano \#\#\#\# \#Axioma 9. De reemplazo. Sean X un conjunto y
+tenemos para \(i \in X\) un conjunto \(A_i\). Entonces, la colección
+\{\(A_i; i\in X\)\} (ó \{\(A_i\)\}\(_{i \in X}\)) es un conjunto.
+\emph{Equivalentemente:} Sean X un conjunto y \(\alpha\) una colección
+de conjuntos tales que cumplen lo siguiente 1. A cada \(A \in \alpha\)
+le podemos asociar una única \(i_A \in X\), y 2. Si \(A, B \in \alpha\)
+son tales que \(i_A = i_B\) entonces \(A=B\). Entonces \(\alpha\) es un
+conjunto.
+
+\hypertarget{axioma-de-elecciuxf3n.}{%
+\paragraph{\#Axioma de Elección.}\label{axioma-de-elecciuxf3n.}}
+
+\begin{quote}
+{[}! Danger{]} Axioma de Elección.
+\(\forall X [(\emptyset \notin X) \Rightarrow [\exists f: X -> \cup X \text{  función  }, [\forall A [(A \in X) \Rightarrow (f(A) \in A)]]]]\).
+En otras palabras: Dado un conjunto cuyos elementos son conjuntos no
+vacíos podemos escoger un elemento de cada conjunto.
+IBelieveInAxiomaDeElección
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{quote}
+{[}! Success{]} \#Corolario: Los naturales forman un conjunto por axioma
+de infinitud. \(N \cup\) \{\(\emptyset\)\} es un conjunto. Los enteros
+forman un conjunto.
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{interpretaciuxf3n-geometrica-de-la-rauxedz-cuadrada-de-reales.}{%
+\subsubsection{Interpretación geometrica de la raíz cuadrada de
+reales.}\label{interpretaciuxf3n-geometrica-de-la-rauxedz-cuadrada-de-reales.}}
+
+\(\sqrt{a}, a \in R\) con \(\alpha > 0\) {[}{[}Interpretación
+Geometrica.png{]}{]} Parte \(1\) y Parte \(2\)
+{[}{[}Interpretación\_Geometrica.excalidraw.png{]}{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{muxe9todos-de-demostraciuxf3n-de-la-luxf3gica-proposicional.}{%
+\subsubsection{Métodos de demostración de la lógica
+proposicional.}\label{muxe9todos-de-demostraciuxf3n-de-la-luxf3gica-proposicional.}}
+
+Prácticamente tablas de verdad xD Si tenemos dos proposiciones, p y q
+para demostrar un p -\textgreater{} q basta con demostrar que p es
+verdadera ya que de ser verdadera entonces q debe de ser verdadera
+también, para más información por favor acudir a
+\url{Metodos-de-demostracion-2024-2.pdf} \_\_\_ \#\# Campos: Sea k un
+conjunto con dos operaciones, que son funciones: Suma: +:\\
+- \emph{kxk -\textgreater{} k} - (\(\alpha, \beta\))
+\textbar-\textgreater{} +(\(\alpha, \beta\)) =: \(\alpha + \beta\)
+Producto: ·: kxk -\textgreater{} k -(\(\alpha, \beta\))
+\textbar-\textgreater{} \((\alpha, \beta) =: \alpha · \beta\)
+
+\begin{quote}
+{[}! Abstract{]}- \#Definición de Campo. Diremos que (k, +, ·) es un
+\emph{campo} si satisface lo siguiente: \(+_.\) 1. Conmutatividad
+\(+_.\) 2. Asociatividad \(+_.\) 3. Neutro Aditivo \(+_.\) 4. Inverso
+Aditivo
+
+\(·_.\) 0. Cerradura \(·_.\) 1. Conmutatividad \(·_.\) 2.
+Asociatividad\\
+\(·_.\) 3. Neutro multiplicativo \(·_.\) 4. Inverso múltiplicativo
+\end{quote}
+
+\begin{quote}
+{[}! Question{]} Lema: Sea (k, +, ·) un campo. Entonces el neutro
+aditivo y el neutro múltiplicativo son únicos
+
+{[}! Question{]} Lema: Sea (k, +, ·) un campo. Entonces el neutro
+aditivo y el neutro múltiplicativo son únicos
+\end{quote}
+
+\begin{quote}
+{[}! Question{]}- \#Lema de la unicidad de los neutros: Sea (k, +, ·) un
+campo. Entonces el neutro aditivo y el neutro múltiplicativo son únicos
+\end{quote}
+
+\begin{quote}
+{[}! Question{]}- Leyes de la cancelación. \#Ley de la cancelación de la
+suma: -
+\(\forall \alpha, \beta, \gamma \in k, [\alpha + \beta = \alpha + \gamma] \Rightarrow [\beta = \gamma]\)
+Ley de la cancelación del Producto: -
+\(\forall \beta, \gamma \in k, \forall \alpha \in k -\) \{\(0\)\},
+\([\alpha \beta = \alpha \gamma] \Rightarrow [\beta = \gamma]\)
+\end{quote}
+
+\hypertarget{campos-y-no-campos}{%
+\subsubsection{Campos y no-campos}\label{campos-y-no-campos}}
+
+\hypertarget{campos}{%
+\paragraph{Campos}\label{campos}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(Q\) los racionales
+\item
+  \(R\) los reales
+\item
+  \(Z\) Los enteros modulo 2 \#\#\#\# No campos
+\item
+  (\{0\}, 0+0 =0, 0·0=0), cumple todos los axiomas excepto que el neutro
+  aditivo y el neutro múltiplicativo son el mismo
+\item
+  \(N\) los números naturales no tienen inversos multiplicativos ni
+  inversos aditivos.
+\item
+  \(Z\) Los enteros no tienen inversos multiplicativos
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{espacios-vectoriales.}{%
+\subsubsection{Espacios Vectoriales.}\label{espacios-vectoriales.}}
+
+\hypertarget{sub-espacios-vectoriales}{%
+\paragraph{Sub-espacios vectoriales}\label{sub-espacios-vectoriales}}
+
+Sea V, W espacios vectoriales \#\# Los Enteros Modulo n \#\#\#\#\# El
+\#algoritmo de la Division. Sean \(n, m \in Z\) números enteros con n ≠
+0. Entonces existen únicos \(d, r \in Z\) con 0 ≤ r \textless{}
+\textbar n\textbar{} tales \(m = nd + r\). Prácticamente lo que hacíamos
+con Arilin 28/5 28 = 5 * 5 +3 O tambien 28 mod 5 = 3 \#\#\#\# El máximo
+común divisor. \#\#\#\#\#\# Valor Absoluto: \[
+|n|= \begin{cases} 
+n, & \text{si n ≥ 0} \\
+-n, & \text{si n < 0}
+\end{cases}
+\]
+
+\begin{quote}
+{[}! Danger{]}- \#Proposición. Sea n ≥ 1 un numero natural. Al siguiente
+conjunto se le llama el conjunto de los enteros módulo n y son los
+residuos al dividir entre n: \[
+Z_n := (\vec 0, \vec 1, ..., \vec{n-1})
+\] Y tiene dos funciones bien definidas: Suma. +:
+\(Z_n x Z_n \Rightarrow Z_n\) - \((\vec a, \vec b) |-> \vec {a+b}\)
+Producto. ·: \(Z_n x Z_n \Rightarrow Z_n\)\\
+- \((\vec a, \vec b) |-> \vec {ab}\) donde la suma cumple
+conmutatividad, asociatividad, tiene un neutro aditivo y el producto
+cumple conmutatividad, asociatividad, tiene neutro multiplicativo,
+cumplen la distributividad y el neutro aditivo es distinto del neutro
+multiplicativo. PERO hay casos en dónde no se cumple el axioma (regla)
+del inverso multiplicativo.
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{c-quancha}{%
+\subsection{C quancha}\label{c-quancha}}
+
+\end{document}
